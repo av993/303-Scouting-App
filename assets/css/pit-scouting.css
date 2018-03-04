@@ -1,0 +1,110 @@
+#pit-submit-btn {
+  position:absolute;
+  top:1034px;
+  left:75px;
+  font-size:19px;
+  background-image:none;
+  background-color:white;
+  color:rgb(13,126,124);
+}
+
+#climb_mechanism-dropdown {
+  position:absolute;
+  top:743px;
+  width:315px;
+  left:436px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#motor-dropdown {
+  position:absolute;
+  top:682px;
+  width:315px;
+  left:436px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#wheels-dropdown {
+  position:absolute;
+  top:621px;
+  width:315px;
+  left:436px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#intake_direction-dropdown {
+  position:absolute;
+  top:560px;
+  width:315px;
+  left:436px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#cube_manipulator-dropdown {
+  position:absolute;
+  top:742px;
+  width:315px;
+  left:67px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#lift_mechanism-dropdown {
+  position:absolute;
+  top:499px;
+  width:315px;
+  left:436px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#intake_mechanism-dropdown {
+  position:absolute;
+  top:312px;
+  width:457px;
+  left:67px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#drivebase-dropdown {
+  position:absolute;
+  top:205px;
+  left:69px;
+  width:457px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+#team-dropdown {
+  position:absolute;
+  top:147px;
+  left:69px;
+  width:457px;
+  background-color:#04a3a3;
+  color:white;
+  border-color:white;
+}
+
+.form-group {
+}
+
+.form-group {
+}
+
+#pit-body {
+  height:1150px;
+}
+

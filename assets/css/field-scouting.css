@@ -1,0 +1,270 @@
+#match-num-input {
+  position:absolute;
+  top:103px;
+  left:274px;
+  background-color:#076776;
+  height:102px;
+  border-radius:32px;
+  width:196px;
+  text-align:center;
+  color:white;
+  font-size:80px;
+  border:hidden;
+}
+
+th, td {
+  border-bottom:white;
+}
+
+#match-num-label {
+  color:white;
+  position:absolute;
+  top:106px;
+  left:34px;
+  font-size:56px;
+}
+
+#thingy {
+  background-image:none;
+  background-color:transparent;
+}
+
+#field-body {
+  margin:0;
+  height:907px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.5;
+  color:#212529;
+  text-align:left;
+  background-color:#fff;
+  width:800px;
+}
+
+#main-field-table {
+  position:absolute;
+  top:232px;
+  font-size:30px;
+  color:white;
+  background-image:none;
+  text-align:center;
+  left:25px;
+  width:800px;
+  background-color:rgba(255,255,255,0);
+}
+
+#jk {
+  background-image:none;
+  width:67px;
+  background-color:rgba(255,255,255,0);
+}
+
+#force-button-3 {
+  position:relative;
+  left:34px;
+  background-image:none;
+  width:48px;
+  background-color:rgb(0,123,255);
+  font-size:28px;
+}
+
+#key-text {
+  position:absolute;
+  top:562px;
+  color:white;
+  left:485px;
+  font-size:16px;
+  height:104px;
+}
+
+#force-button-2 {
+  position:relative;
+  background-color:rgb(0,123,255);
+  background-image:none;
+  left:17px;
+  background-image:none;
+  font-size:28px;
+  width:48px;
+}
+
+#force-button-1 {
+  font-size:28px;
+  background-color:rgb(0,123,255);
+  background-image:none;
+  background-image:none;
+  width:48px;
+}
+
+#force-button-1-r {
+  background-image:none;
+  font-size:28px;
+  width:48px;
+  background-color:red;
+}
+
+#force-button-2-r {
+  font-size:28px;
+  width:48px;
+  background-image:none;
+  background-color:red;
+  position:relative;
+  left:17px;
+}
+
+#force-button-3-r {
+  font-size:28px;
+  width:48px;
+  background-color:red;
+  background-image:none;
+  position:relative;
+  left:34px;
+}
+
+#boost-button-3-r {
+  font-size:28px;
+  width:48px;
+  background-color:red;
+  background-image:none;
+  position:relative;
+  left:34px;
+}
+
+#levitate-button-3-r {
+  font-size:28px;
+  width:48px;
+  background-color:red;
+  position:relative;
+  background-image:none;
+  left:34px;
+}
+
+#boost-button-2-r {
+  font-size:28px;
+  width:48px;
+  background-color:red;
+  position:relative;
+  background-image:none;
+  left:17px;
+}
+
+#levitate-button-2-r {
+  font-size:28px;
+  width:48px;
+  background-image:none;
+  background-color:red;
+  position:relative;
+  left:17px;
+}
+
+#boost-button-1-r {
+  font-size:28px;
+  width:48px;
+  background-image:none;
+  background-color:red;
+}
+
+#levitate-button-1-r {
+  font-size:28px;
+  width:48px;
+  background-image:none;
+  background-color:red;
+  position:relative;
+  left:15px;
+}
+
+#boost-button-1 {
+  font-size:28px;
+  background-color:rgb(0,123,255);
+  background-image:none;
+  width:48px;
+}
+
+#levitate-button-1 {
+  font-size:28px;
+  background-color:rgb(0,123,255);
+  background-image:none;
+  width:48px;
+  position:relative;
+  left:18px;
+}
+
+#boost-button-2 {
+  position:relative;
+  left:17px;
+  background-color:rgb(0,123,255);
+  font-size:28px;
+  background-image:none;
+  background-image:none;
+  width:48px;
+}
+
+#levitate-button-2 {
+  position:relative;
+  background-image:none;
+  left:17px;
+  font-size:28px;
+  width:48px;
+  color:blue;
+}
+
+#boost-button-3 {
+  position:relative;
+  background-color:rgb(0,123,255);
+  left:34px;
+  width:48px;
+  background-image:none;
+  font-size:28px;
+}
+
+#levitate-button-3 {
+  position:relative;
+  left:34px;
+  width:48px;
+  font-size:28px;
+}
+
+#start-match {
+  -moz-border-radius:0;
+  border-radius:0px;
+  font-family:Arial;
+  color:#0a8482;
+  font-size:24px;
+  background:#ffffff;
+  padding:10px 20px 10px 20px;
+  border:solid #ffffff 2px;
+  position:absolute;
+  top:115px;
+  left:507px;
+  font-weight:500;
+}
+
+#field-timer {
+  color:white;
+  position:relative;
+  top:104px;
+  font-size:51px;
+  left:733px;
+}
+
+#field-submit-btn {
+  position:absolute;
+  top:624px;
+  background-color:rgb(46,187,195);
+  left:400px;
+  font-size:30px;
+  background-image:none;
+}
+
+#powerup-timer {
+  color:white;
+  position:absolute;
+  top:538px;
+  font-size:51px;
+  left:63px;
+}
+
+#field-nav {
+  width:1025px;
+}
+

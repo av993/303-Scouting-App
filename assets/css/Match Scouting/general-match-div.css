@@ -1,0 +1,49 @@
+#match-team-dropdown {
+  position:absolute;
+  top:65px;
+  left:366px;
+  width:167px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#match-event-dropdown {
+  position:absolute;
+  top:65px;
+  left:556px;
+  width:191px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+.match-dropdown {
+  width:130px;
+  text-align:left;
+  text-indent:4px;
+  font-weight:700;
+  border-color:white;
+}
+
+#match-event-dropdown-btn {
+  width:270px;
+  text-align:left;
+  text-indent:4px;
+  font-weight:700;
+  border-color:white;
+}
+
+#match-name-label {
+  position:absolute;
+  top:120px;
+  left:358px;
+}
+
+#match-name-input {
+  position:absolute;
+  top:120px;
+  left:432px;
+  width:178px;
+}
+

@@ -1,0 +1,317 @@
+#general-teleop-div {
+  position:absolute;
+  top:101px;
+  display:none;
+  background-color:white;
+  height:350px;
+  width:700px;
+}
+
+#general-teleop-switch-cubes-label {
+  position:absolute;
+  top:22px;
+  left:20px;
+}
+
+#general-teleop-ground-cubes-label {
+  position:absolute;
+  top:241px;
+  left:20px;
+}
+
+#general-teleop-ground-accuracy-label {
+  position:absolute;
+  top:24px;
+  left:336px;
+}
+
+#general-teleop-scale-cubes-label {
+  position:absolute;
+  top:79px;
+  left:20px;
+}
+
+#general-teleop-exchange-cubes-label {
+  position:absolute;
+  top:187px;
+  left:20px;
+}
+
+#general-teleop-portal-cubes-label {
+  position:absolute;
+  top:129px;
+  left:20px;
+}
+
+#general-teleop-switch-cubes-minus {
+  position:absolute;
+  top:15px;
+  left:185px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-accuracy-cubes-minus {
+  position:absolute;
+  top:15px;
+  left:536px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-scale-cubes-minus {
+  position:absolute;
+  top:70px;
+  left:185px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-portal-cubes-minus {
+  position:absolute;
+  top:123px;
+  left:185px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-exchange-cubes-minus {
+  position:absolute;
+  top:179px;
+  left:185px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-ground-cubes-minus {
+  position:absolute;
+  top:231px;
+  left:185px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-switch-cubes-plus {
+  position:absolute;
+  top:15px;
+  left:288px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-portal-cubes-plus {
+  position:absolute;
+  top:125px;
+  left:288px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-scale-cubes-plus {
+  position:absolute;
+  top:70px;
+  left:288px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-exchange-cubes-plus {
+  position:absolute;
+  top:180px;
+  left:288px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-accuracy-cubes-plus {
+  position:absolute;
+  top:15px;
+  left:633px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-ground-cubes-plus {
+  position:absolute;
+  top:232px;
+  left:288px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-switch-cubes-input {
+  position:absolute;
+  top:14px;
+  left:236px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-scale-cubes-input {
+  position:absolute;
+  top:71px;
+  left:236px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-portal-cubes-input {
+  position:absolute;
+  top:125px;
+  left:236px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-exchange-cubes-input {
+  position:absolute;
+  top:180px;
+  left:236px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-ground-cubes-input {
+  position:absolute;
+  top:232px;
+  left:236px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-accuracy-cubes-input {
+  position:absolute;
+  top:16px;
+  left:584px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-dropdown-intake-direction {
+  position:absolute;
+  left:346px;
+  top:65px;
+  /*border-color:white;*/
+  /*text-align:left;*/
+  width:407px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#general-teleop-dropdown-intake-direction-btn {
+  text-align:left;
+  /*text-indent:4px;*/
+  border-color:white;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#general-teleop-cube-manipulatiton-label {
+  position:absolute;
+  left:335px;
+  top:114px;
+}
+
+#general-teleop-cube-manipulation-input {
+  position:absolute;
+  left:346px;
+  top:143px;
+  width:336px;
+  height:55px;
+}
+
+#general-select {
+  position:absolute;
+  top:200px;
+}
+
+#general-teleop-dropdown-prioritize {
+  position:absolute;
+  top:289px;
+  left:183px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#general-teleop-defense-textarea {
+  position:absolute;
+  left:350px;
+  top:209px;
+  width:327px;
+  height:59px;
+}
+
+#test-p {
+  top:224px;
+  width:500px;
+  position:absolute;
+  height:200px;
+  left:786px;
+}
+
+#teleop-cube-manipulator-dropdown {
+  width:330px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#teleop-strategy-dropdown {
+  width:330px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#teleop-intake-direction-dropdown {
+  width:330px;
+  position:absolute;
+  top:65px;
+  left:350px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#teleop-priorities-dropdown {
+  width:330px;
+  position:absolute;
+  top:294px;
+  left:182px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+.form-group {
+}
+
+#general-submit {
+  position:absolute;
+  top:638px;
+  background-color:rgb(15,186,183);
+  left:34px;
+  background-image:none;
+}
+

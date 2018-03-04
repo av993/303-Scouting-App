@@ -1,0 +1,60 @@
+#event-div {
+  position:absolute;
+  top:50px;
+  display:none;
+  left:78px;
+  width:562px;
+  height:400px;
+}
+
+#event-data {
+  position:absolute;
+  top:200px;
+  left:730px;
+}
+
+#event-switch-btn {
+  left:50px;
+  position:absolute;
+  top:12px;
+}
+
+.event-btn {
+  border-radius:11px;
+  background-color:rgb(0,223,254);
+  font-weight:500;
+  position:absolute;
+  width:145px;
+  border-color:rgba(255,255,255,0);
+}
+
+#event-scale-btn {
+  top:12px;
+  left:373px;
+}
+
+#event-problem-btn {
+  top:82px;
+  left:210px;
+}
+
+#event-exchange-btn {
+  top:12px;
+  left:209px;
+}
+
+#event-pickup-btn {
+  top:82px;
+  left:50px;
+}
+
+#event-penalty-btn {
+  top:83px;
+  left:373px;
+}
+
+#event-od-btn {
+  top:147px;
+  left:210px;
+}
+

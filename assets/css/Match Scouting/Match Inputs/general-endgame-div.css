@@ -1,0 +1,85 @@
+#general-endgame-div {
+  position:absolute;
+  top:152px;
+  width:700px;
+  height:400px;
+  display:none;
+}
+
+#endgame-climb-dropdown {
+  position:absolute;
+  top:20px;
+  left:349px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+  width:330px;
+}
+
+#general-endgame-dropdown-climb-btn {
+  width:300px;
+  text-align:left;
+  text-indent:10px;
+  border-color:rgb(197,189,189);
+}
+
+#general-endgame-climb-explanation {
+  position:absolute;
+  top:67px;
+  left:25px;
+  border-color:rgb(254,251,251);
+  width:295px;
+}
+
+#general-endgame-penalties-label {
+  position:absolute;
+  left:15px;
+  top:18px;
+}
+
+#general-endgame-tipped-over {
+  position:absolute;
+  top:75px;
+}
+
+#general-endgame-burnout {
+  position:absolute;
+  top:47px;
+}
+
+#general-endgame-connection-issues {
+  position:absolute;
+  top:104px;
+}
+
+#general-endgame-switch-scale-problem {
+  position:absolute;
+  top:133px;
+}
+
+#general-endgame-penalties {
+  position:absolute;
+  top:163px;
+}
+
+#general-teleop-penalty-points {
+  position:absolute;
+  top:164px;
+  left:134px;
+  width:39px;
+  text-align:center;
+}
+
+#general-endgame-penalties-input {
+  position:absolute;
+  left:24px;
+  top:199px;
+  width:300px;
+  height:60px;
+}
+
+.penalty {
+  position:absolute;
+  left:25px;
+}
+

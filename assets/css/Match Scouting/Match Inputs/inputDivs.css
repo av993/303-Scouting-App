@@ -1,0 +1,21 @@
+#switch-div {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#vault-div {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#general-div {
+  position:absolute;
+  top:50px;
+  left:0;
+  /*background-color:rgba(43,234,188,0.7);*/
+  width:700px;
+  height:500px;
+}
+

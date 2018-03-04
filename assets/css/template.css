@@ -1,0 +1,501 @@
+#event-switch-btn:active {
+  background-color:white;
+  color:#008080;
+}
+
+#events-dropdown-platform-problems {
+  top:60px;
+  position:absolute;
+  width:279px;
+  left:40px;
+}
+
+#events-dropdown-pickup {
+  top:116px;
+  position:absolute;
+  width:279px;
+  left:40px;
+}
+
+.events-dropdown {
+  color:white;
+  background-color:rgb(29,186,183);
+  font-weight:600;
+  height:41px;
+  font-size:19px;
+}
+
+#switch-div {
+  position:absolute;
+  top:41px;
+  display:none;
+  left:178px;
+  height:153px;
+  width:380px;
+}
+
+#event-submit {
+  position:absolute;
+  left:221px;
+  top:237px;
+  background-image:none;
+  width:116px;
+  display:none;
+  border-color:white;
+  font-weight:800;
+  background-color:rgb(63,206,215);
+}
+
+#event-cancel {
+  position:absolute;
+  left:374px;
+  display:none;
+  top:237px;
+  background-image:none;
+  width:127px;
+  font-weight:800;
+  border-color:white;
+  background-color:rgb(252,11,11);
+}
+
+#switch-coordinates {
+  position:absolute;
+  top:12px;
+  left:241px;
+}
+
+#switch-label {
+  position:absolute;
+  top:12px;
+  left:8px;
+}
+
+#pz-cubes-label {
+  position:absolute;
+  top:12px;
+  left:8px;
+}
+
+#pz-cubes-time {
+  position:absolute;
+  top:47px;
+  left:8px;
+}
+
+#exchange-time {
+  position:absolute;
+  top:37px;
+  left:0px;
+}
+
+#pz-cubes-place {
+  position:absolute;
+  top:47px;
+  left:85px;
+}
+
+#exchange-place {
+  position:absolute;
+  top:37px;
+  left:85px;
+}
+
+#cubes-pz-label {
+  position:absolute;
+  top:12px;
+  left:8px;
+}
+
+#switch-time {
+  position:absolute;
+  top:12px;
+  left:139px;
+}
+
+#scale-btn-minus {
+  position:absolute;
+  top:62px;
+  left:26px;
+}
+
+#switch-btn-minus {
+  position:absolute;
+  top:62px;
+  left:26px;
+}
+
+#scale-btn-plus {
+  position:absolute;
+  top:61px;
+  left:121px;
+}
+
+#switch-btn-plus {
+  position:absolute;
+  top:61px;
+  left:121px;
+}
+
+#switch-btn-plus {
+  position:absolute;
+  top:61px;
+  left:121px;
+}
+
+#switch-btn-plus {
+  position:absolute;
+  top:88px;
+  left:119px;
+}
+
+#vault-boost {
+  position:absolute;
+  top:205px;
+  left:29px;
+}
+
+#scale-btn-submit {
+  position:absolute;
+  top:170px;
+  left:29px;
+}
+
+#switch-btn-submit {
+  position:absolute;
+  top:205px;
+  left:29px;
+}
+
+#scale-cubes-input {
+  position:absolute;
+  top:61px;
+  left:71px;
+  text-align:center;
+  height:35px;
+  width:40px;
+  font-weight:600;
+}
+
+#platform-btn-climb {
+  position:absolute;
+  top:53px;
+  left:17px;
+  width:40px;
+  height:37px;
+}
+
+#platform-btn-park {
+  position:absolute;
+  top:103px;
+  left:17px;
+  width:40px;
+  height:37px;
+}
+
+#switch-cubes-input {
+  position:absolute;
+  top:61px;
+  left:71px;
+  height:35px;
+  width:40px;
+}
+
+#vault-boos {
+  position:absolute;
+  top:88px;
+  left:67px;
+  height:35px;
+  width:40px;
+}
+
+#pz-cubes-input {
+  position:absolute;
+  top:88px;
+  left:67px;
+  height:35px;
+  width:40px;
+}
+
+#exchange-cubes-in {
+  position:absolute;
+  top:75px;
+  left:15px;
+  height:35px;
+  width:40px;
+}
+
+#exchange-cubes-out {
+  position:absolute;
+  top:127px;
+  left:15px;
+  height:35px;
+  width:40px;
+}
+
+#vault-boost {
+  position:absolute;
+  top:60px;
+  left:27px;
+  height:35px;
+  width:40px;
+}
+
+#vault-label-boost {
+  position:absolute;
+  top:60px;
+  left:89px;
+  height:35px;
+  width:95px;
+}
+
+#exchange-label-cubes-in {
+  position:absolute;
+  top:73px;
+  left:68px;
+  height:35px;
+  width:175px;
+}
+
+#exchange-label-cubes-out {
+  position:absolute;
+  top:127px;
+  left:70px;
+  height:35px;
+  width:190px;
+}
+
+#vault-label-levitate {
+  position:absolute;
+  top:170px;
+  left:89px;
+  height:35px;
+  width:117px;
+}
+
+#vault-label-force {
+  position:absolute;
+  top:117px;
+  left:89px;
+  height:35px;
+  width:95px;
+}
+
+#vault-levitate {
+  position:absolute;
+  top:168px;
+  left:27px;
+  height:35px;
+  width:40px;
+}
+
+#vault-force {
+  position:absolute;
+  top:115px;
+  left:27px;
+  height:35px;
+  width:40px;
+}
+
+body {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.42857143;
+  color:#333;
+  height:1000px;
+  background-color:#fff;
+}
+
+#switch-description {
+  position:absolute;
+  top:61px;
+  left:178px;
+  height:100px;
+  width:111px;
+}
+
+#scale-description {
+  position:absolute;
+  top:61px;
+  left:178px;
+  height:100px;
+  width:111px;
+}
+
+#scale-div {
+  position:absolute;
+  height:192px;
+  width:362px;
+  top:36px;
+  display:none;
+  left:174px;
+}
+
+#exchange-label {
+  position:absolute;
+  top:7px;
+  left:-2px;
+}
+
+#scale-label {
+  position:absolute;
+  top:12px;
+  left:8px;
+}
+
+#platform-label {
+  position:absolute;
+  top:12px;
+  left:3px;
+}
+
+#vault-label {
+  position:absolute;
+  top:12px;
+  left:8px;
+}
+
+#switch-time {
+  position:absolute;
+  top:12px;
+  left:139px;
+}
+
+#scale-time {
+  position:absolute;
+  top:12px;
+  left:139px;
+}
+
+#vault-time {
+  position:absolute;
+  top:12px;
+  left:133px;
+}
+
+#platform-time {
+  position:absolute;
+  top:12px;
+  left:133px;
+}
+
+#vault-coordinates {
+  top:12px;
+  left:241px;
+  position:absolute;
+}
+
+#exchange-div {
+  position:absolute;
+  top:8px;
+  left:762px;
+  height:197px;
+  width:261px;
+}
+
+#platform-label-climb {
+  position:absolute;
+  top:104px;
+  left:73px;
+}
+
+#platform-label-park {
+  position:absolute;
+  top:54px;
+  left:73px;
+}
+
+#penalty-div {
+  position:absolute;
+  top:56px;
+  left:198px;
+  display:none;
+  height:159px;
+  width:380px;
+}
+
+#platform-div {
+  position:absolute;
+  top:437px;
+  left:9px;
+  height:150px;
+  width:351px;
+}
+
+#vault-div {
+  position:absolute;
+  top:289px;
+  left:388px;
+  width:364px;
+  height:234px;
+}
+
+#pz-cubes-btn-plus {
+  position:absolute;
+  top:89px;
+  left:119px;
+}
+
+#switch--btn-plus {
+  position:absolute;
+  top:61px;
+  left:121px;
+}
+
+#pz-cubes-btn-minus {
+  position:absolute;
+  top:89px;
+  left:24px;
+}
+
+#pz-cubes-div {
+  position:absolute;
+  top:290px;
+  left:9px;
+  height:140px;
+  width:366px;
+}
+
+#cubes-pz-div {
+  position:absolute;
+  top:343px;
+  left:31px;
+  height:161px;
+  width:366px;
+}
+
+#scale-text {
+  position:absolute;
+  top:112px;
+  left:28px;
+  height:83px;
+  width:318px;
+}
+
+#switch-text {
+  position:absolute;
+  top:112px;
+  left:28px;
+  height:83px;
+  width:318px;
+}
+
+#scale-text {
+  position:absolute;
+  top:112px;
+  left:28px;
+  height:83px;
+  width:318px;
+}
+
+#scale-coordinates {
+  top:12px;
+  left:241px;
+  position:absolute;
+}
+
+#platform-coordinates {
+  top:12px;
+  left:241px;
+  position:absolute;
+}
+

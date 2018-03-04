@@ -1,0 +1,282 @@
+#home-div {
+  position:relative;
+  top:40px;
+  height:700px;
+  padding-bottom:10px;
+}
+
+#matchScoutingButton {
+  position:absolute;
+  top:50px;
+  width:500px;
+  height:60px;
+  left:130px;
+}
+
+#pitScoutingButton {
+  position:absolute;
+  top:130px;
+  left:130px;
+  width:500px;
+  height:60px;
+  font-size:25px;
+  background-image:none;
+  color:rgb(14,59,59);
+}
+
+#fieldScoutingButton {
+  position:absolute;
+  top:210px;
+  left:130px;
+  width:500px;
+  height:60px;
+  font-size:25px;
+  background-image:none;
+  color:rgb(14,59,59);
+}
+
+#dataScoutingButton {
+  position:absolute;
+  top:290px;
+  left:130px;
+  width:500px;
+  height:60px;
+  font-size:25px;
+  background-image:none;
+  color:rgb(14,59,59);
+}
+
+.rounded {
+  border-radius:10px;
+}
+
+.white-border {
+  border-color:white;
+}
+
+#tele-switch-check {
+  position:absolute;
+  top:482px;
+}
+
+#tele-switch-check {
+  position:absolute;
+  top:579px;
+}
+
+#tele-scale-check {
+  position:absolute;
+  top:670px;
+  left:70px;
+}
+
+#tele-scale-check {
+  position:absolute;
+}
+
+#tele-switch-check {
+  position:absolute;
+  top:672px;
+}
+
+#tele-scale-check {
+  position:absolute;
+  top:480px;
+}
+
+#tele-scale-check2 {
+  position:absolute;
+  top:652px;
+}
+
+#tele-scale-check {
+  position:absolute;
+  top:651px;
+}
+
+#tele-scale-check2 {
+  position:absolute;
+  top:632px;
+  left:71px;
+}
+
+#tele-switch-check2 {
+  position:absolute;
+  top:592px;
+  left:70px;
+}
+
+#cubenum-input {
+  position:absolute;
+  top:706px;
+  left:241px;
+  width:43px;
+}
+
+#cube-number-label {
+  position:absolute;
+  top:704px;
+  left:63px;
+}
+
+#portal-check {
+  position:absolute;
+  top:689px;
+  left:71px;
+}
+
+#ground-check {
+  position:absolute;
+  top:672px;
+  left:70px;
+}
+
+#placement-label {
+  position:absolute;
+  top:839px;
+  left:64px;
+}
+
+#place-mech-input {
+  position:absolute;
+  top:835px;
+  left:238px;
+  width:206px;
+}
+
+#climbing-title {
+  position:absolute;
+  top:823px;
+  left:65px;
+}
+
+#has-climb {
+  position:absolute;
+  left:74px;
+  top:873px;
+}
+
+#climb-on {
+  position:absolute;
+}
+
+#climb-on {
+  position:absolute;
+  top:907px;
+  left:75px;
+}
+
+#buddy-climb-on {
+  position:absolute;
+  top:940px;
+  left:76px;
+}
+
+#climb-num-input {
+  position:absolute;
+  top:1111px;
+  left:378px;
+  width:43px;
+}
+
+#num-climb-label {
+  position:absolute;
+  top:1112px;
+  left:70px;
+}
+
+#fun-title {
+  position:absolute;
+  top:1180px;
+  left:70px;
+}
+
+#fav-label {
+  position:absolute;
+  top:1234px;
+  left:72px;
+}
+
+#fav-input {
+  position:absolute;
+  top:1233px;
+  left:349px;
+}
+
+#auto-switch {
+  position:absolute;
+  top:499px;
+  left:70px;
+}
+
+#has-climb-check {
+  position:absolute;
+  top:947px;
+}
+
+#portal-check {
+  position:absolute;
+  top:791px;
+}
+
+#ground-check {
+  position:absolute;
+  top:751px;
+}
+
+ground {
+}
+
+#ground-check {
+  position:absolute;
+  top:748px;
+}
+
+#tele-scale-check2 {
+  position:absolute;
+  top:647px;
+}
+
+#tele-switch-check2 {
+  position:absolute;
+  top:599px;
+}
+
+#teleop-strategy-dropdown {
+  position:absolute;
+}
+
+#teleop-strategy-dropdown {
+  position:absolute;
+  top:160px;
+  left:350px;
+  width:330px;
+}
+
+#teleop-cube-manipulation-dropdown {
+  position:absolute;
+  top:160px;
+  left:350px;
+  width:331px;
+}
+
+#teleop-cube-manipulator-dropdown {
+  position:absolute;
+  top:111px;
+  left:350px;
+  width:330px;
+}
+
+#match-match-label {
+  position:absolute;
+  left:609px;
+  top:117px;
+}
+
+#match-match-input {
+  position:absolute;
+  left:695px;
+  width:48px;
+  top:119px;
+}
+

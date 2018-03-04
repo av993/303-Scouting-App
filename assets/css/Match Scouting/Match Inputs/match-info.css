@@ -1,0 +1,79 @@
+#input-div {
+  left:30px;
+  position:absolute;
+  width:320px;
+  top:420px;
+}
+
+#endgame-expand-status {
+  display:none;
+}
+
+#auto-expand-status {
+  display:none;
+}
+
+#teleop-expand-status {
+  display:none;
+}
+
+#selected-type {
+  font-size:25px;
+  color:white;
+}
+
+#description-label {
+  font-size:20px;
+  padding-top:10px;
+  color:white;
+  position:absolute;
+  top:140px;
+  left:0px;
+}
+
+#description-input {
+  position:absolute;
+  top:190px;
+  left:0px;
+  width:250px;
+  height:70px;
+}
+
+#number-cubes {
+  top:30px;
+  left:20px;
+  width:37px;
+  height:37px;
+  position:relative;
+}
+
+#minus-button {
+  position:relative;
+  border-color:white;
+  left:0px;
+  font-size:medium;
+  top:30px;
+  height:37px;
+  width:37px;
+  border-radius:0px;
+}
+
+#plus-button {
+  position:relative;
+  border-color:white;
+  left:40px;
+  font-size:medium;
+  top:30px;
+  height:37px;
+  width:37px;
+  border-radius:0px;
+}
+
+#add-event-button {
+  position:relative;
+  top:0px;
+  left:0px;
+  width:120px;
+  height:50px;
+}
+

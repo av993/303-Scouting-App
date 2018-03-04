@@ -1,0 +1,56 @@
+#home-div {
+  position:relative;
+  top:40px;
+  height:700px;
+  padding-bottom:10px;
+}
+
+#matchScoutingButton {
+  position:absolute;
+  top:50px;
+  width:500px;
+  height:60px;
+  left:130px;
+}
+
+#pitScoutingButton {
+  position:absolute;
+  top:130px;
+  left:130px;
+  width:500px;
+  height:60px;
+  font-size:25px;
+  background-image:none;
+  color:rgb(14,59,59);
+}
+
+#fieldScoutingButton {
+  position:absolute;
+  top:210px;
+  left:130px;
+  width:500px;
+  height:60px;
+  font-size:25px;
+  background-image:none;
+  color:rgb(14,59,59);
+}
+
+#dataScoutingButton {
+  position:absolute;
+  top:290px;
+  left:130px;
+  width:500px;
+  height:60px;
+  font-size:25px;
+  background-image:none;
+  color:rgb(14,59,59);
+}
+
+.rounded {
+  border-radius:10px;
+}
+
+.white-border {
+  border-color:white;
+}
+

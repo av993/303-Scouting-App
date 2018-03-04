@@ -1,0 +1,46 @@
+#data-json-btn {
+  position:absolute;
+  top:143px;
+  left:56px;
+  background-image:none;
+  background-color:rgb(13,182,180);
+}
+
+#data-excel-btn {
+  position:absolute;
+  top:196px;
+  left:56px;
+  background-image:none;
+  background-color:rgb(13,182,180);
+}
+
+#data-link {
+  position:absolute;
+  top:248px;
+  left:56px;
+  background-image:none;
+  background-color:rgb(13,182,180);
+}
+
+#data-event-dropdown {
+  position:absolute;
+  top:83px;
+  width:264px;
+  left:57px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+
+#data-type-dropdown {
+  position:absolute;
+  top:83px;
+  width:264px;
+  left:357px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+

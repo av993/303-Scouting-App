@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC Scouting Team 303</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/eventDiv.css">
+    <link rel="stylesheet" href="assets/css/field-scouting.css">
+    <link rel="stylesheet" href="assets/css/Home/Home-1.css">
+    <link rel="stylesheet" href="assets/css/Home/Home.css">
+    <link rel="stylesheet" href="assets/css/Home/pit-scouting.css">
+    <link rel="stylesheet" href="assets/css/Match Scouting/checkbox.css">
+    <link rel="stylesheet" href="assets/css/Match Scouting/general-match-div.css">
+    <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/general-div.css">
+    <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/general-endgame-div.css">
+    <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/general-teleop-div.css">
+    <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/inputDivs.css">
+    <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/match-info.css">
+    <link rel="stylesheet" href="assets/css/Other/Button-Outlines---Pretty.css">
+    <link rel="stylesheet" href="assets/css/Other/styles.css">
+    <link rel="stylesheet" href="assets/css/pit-scouting.css">
+    <link rel="stylesheet" href="assets/css/scouting-data.css">
+    <link rel="stylesheet" href="assets/css/template.css">
+</head>
+
+<body style="background-color:#008080;">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-image:url(&quot;assets/img/teal-gradient.jpg&quot;);">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand" href="#" style="color:rgb(255,255,255);"><strong>FRC Team 303</strong> Scouting</a><button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><a href="index.html" style="color:rgb(255,255,255);background-color:#0a8482;">Match Scouting</a></li>
+                    <li role="presentation"><a href="pit-scouting.html" style="color:rgb(255,255,255);background-image:url(&quot;none&quot;);background-color:#0a8482;">Pit Scouting</a></li>
+                    <li role="presentation"><a href="field-scouting.html" style="background-color:#0a8482;color:rgb(255,255,255);">Field Scouting</a></li>
+                    <li role="presentation"><a href="scouting-data.html" style="color:rgb(255,255,255);background-color:#0eb6b3;">Scouting Data</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav><a class="btn btn-default" role="button" href="#" id="data-json-btn" onclick = "getJSON()">GET JSON</a><a class="btn btn-default" role="button" href="http://www.convertcsv.com/json-to-csv.htm" target="_blank" id="data-link" style="background-color:rgb(46,188,103);">CONVERT : JSON TO EXCEL</a><button class="btn btn-default"
+        type="button" id="data-excel-btn">DOWNLOAD EXCEL</button><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="data-type-dropdown">
+      <option>--Type--</option>
+      <option>Match</option>
+      <option>Pit</option>
+        <option>Field</option>
+    </select>
+  </div><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="data-event-dropdown">
+      <option>--Event--</option>
+      <option>Mt Olive</option>
+      <option>Bridgewater</option>
+        <option>Detroit</option>
+        <option>China</option>
+          <option>North Korea</option>
+    </select>
+  </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/addminus.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/event.js"></script>
+    <script src="assets/js/field-scouting.js"></script>
+    <script src="assets/js/general-div.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="assets/js/latefirebase.js"></script>
+    <script src="assets/js/latelocal.js"></script>
+    <script src="assets/js/matchEvents.js"></script>
+    <script src="assets/js/pit-scouting.js"></script>
+    <script src="assets/js/scouting-data.js"></script>
+    <script src="assets/js/timer.js"></script>
+</body>
+
+</html>

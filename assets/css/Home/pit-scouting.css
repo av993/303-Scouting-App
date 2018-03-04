@@ -1,0 +1,157 @@
+#main-div {
+  position:absolute;
+  top:50px;
+  width:800px;
+  height:800px;
+}
+
+#name {
+  position:absolute;
+  top:44px;
+  left:59px;
+  width:60px;
+  height:20px;
+  text-align:left;
+}
+
+#name-input {
+  position:absolute;
+  top:44px;
+  left:235px;
+  width:288px;
+}
+
+#team-dropdown {
+  position:absolute;
+  top:90px;
+  left:65px;
+  text-align:center;
+  width:625px;
+}
+
+#drive-base-label {
+  position:absolute;
+  top:217px;
+  left:64px;
+}
+
+#drivebase-input {
+  position:absolute;
+  top:215px;
+  left:235px;
+  width:286px;
+}
+
+body {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.42857143;
+  color:#c8c8c8;
+  background-color:#5e7592;
+  height:15000px;
+  width:800px;
+}
+
+#intake {
+  position:absolute;
+  left:64px;
+  top:269px;
+}
+
+#intake-input {
+  position:absolute;
+  left:235px;
+  top:268px;
+  width:288px;
+}
+
+#auto-title {
+  position:absolute;
+  top:319px;
+  left:56px;
+}
+
+#auto-line-label {
+  position:absolute;
+}
+
+#drivebase-dropdown {
+  position:absolute;
+  top:146px;
+  left:66px;
+  width:627px;
+}
+
+#auto-line-check {
+  position:absolute;
+  top:414px;
+  left:70px;
+}
+
+#has-auto-check {
+  position:absolute;
+  top:371px;
+  left:71px;
+}
+
+#auto-scale-check {
+  position:absolute;
+  top:458px;
+  left:70px;
+}
+
+#auto-switch-check {
+  position:absolute;
+  top:505px;
+  left:69px;
+}
+
+#teleop-title {
+  position:absolute;
+  top:545px;
+  left:57px;
+}
+
+#tele-switch-check {
+  position:absolute;
+  top:607px;
+  left:70px;
+}
+
+#tele-scale-check {
+  position:absolute;
+  top:298px;
+}
+
+.dropdown-pit {
+  background-color:white;
+  font-color:white;
+}
+
+#team-dropdown-2 {
+  position:absolute;
+  left:71px;
+  top:136px;
+  width:535px;
+  border-width:1.5px;
+  border-color:rgb(10,132,130);
+}
+
+#team-dropdown-3 {
+  position:absolute;
+  left:0px;
+  top:59px;
+  width:535px;
+  border-width:1.5px;
+  border-color:white;
+}
+
+#pit-submit-button {
+  position:absolute;
+  top:1338px;
+  left:83px;
+  width:135px;
+  border-color:white;
+  height:45px;
+}
+

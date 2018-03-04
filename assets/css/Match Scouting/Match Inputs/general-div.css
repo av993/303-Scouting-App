@@ -1,0 +1,198 @@
+#general-auto-div {
+  position:absolute;
+  top:51px;
+  width:700px;
+  height:0px;
+  display:none;
+  background-color:rgba(195,53,197,0.1);
+}
+
+#auto-expand {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:700px;
+  height:50px;
+  text-align:left;
+  text-indent:10px;
+  background-color:rgb(15,186,183);
+  background-image:none;
+}
+
+#teleop-expand {
+  position:absolute;
+  left:0px;
+  top:51px;
+  width:700px;
+  height:50px;
+  text-align:left;
+  background-color:rgb(15,186,183);
+  text-indent:10px;
+  background-image:none;
+}
+
+#endgame-expand {
+  position:absolute;
+  left:0px;
+  top:102px;
+  background-image:none;
+  width:700px;
+  background-color:rgb(15,186,183);
+  height:50px;
+  text-align:left;
+  text-indent:10px;
+}
+
+#general-auto-expand-sign {
+  position:absolute;
+  top:11px;
+  right:17px;
+}
+
+#general-teleop-expand-sign {
+  position:absolute;
+  top:61px;
+  right:17px;
+}
+
+#general-endgame-expand-sign {
+  position:absolute;
+  top:111px;
+  right:17px;
+}
+
+#general-auto-switch-cube {
+  width:30px;
+}
+
+#general-auto-div-switch-cubes {
+  position:absolute;
+  left:10px;
+}
+
+#general-auto-div-cubes-picked-up {
+  position:absolute;
+  top:171px;
+  left:10px;
+}
+
+#general-auto-div-switch-minus {
+  position:relative;
+  left:166px;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  top:-8px;
+  text-align:center;
+}
+
+#general-auto-div-scale-minus {
+  position:relative;
+  left:128px;
+  top:46px;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  text-align:center;
+}
+
+#general-auto-div-switch-plus {
+  position:absolute;
+  left:257px;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  top:101px;
+}
+
+#general-auto-div-scale-plus {
+  position:absolute;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  left:257px;
+  top:47px;
+}
+
+#general-auto-div-cubes-picked-up-plus {
+  position:absolute;
+  left:257px;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  top:161px;
+}
+
+#general-auto-switch-number-input {
+  width:38px;
+  position:absolute;
+  height:37px;
+  text-align:center;
+  top:48px;
+  left:212px;
+  background-color:white;
+  font-weight:800;
+}
+
+#general-auto-scale-number-input {
+  width:38px;
+  position:absolute;
+  height:37px;
+  text-align:center;
+  top:102px;
+  left:212px;
+  font-weight:800;
+}
+
+.scale-cubes-auto-general {
+  top:110px;
+}
+
+#general-auto-div-cubes-picked-up-minus {
+  position:absolute;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  left:166px;
+  top:161px;
+}
+
+#general-auto-div-cubes-picked-up-plus {
+  position:absolute;
+  left:257px;
+  top:161px;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+}
+
+#general-auto-cubes-picked-up-number-input {
+  position:absolute;
+  width:34px;
+  height:38px;
+  left:212px;
+  top:161px;
+  text-align:center;
+  font-weight:800;
+}
+
+.center {
+  text-align:center;
+}
+
+#general-submit {
+  top:165px;
+  background-color:rgb(29,149,176);
+  position:absolute;
+  background-image:none;
+  font-weight:400;
+  border-color:white;
+}
+
