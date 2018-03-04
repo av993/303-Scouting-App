@@ -1,5 +1,3 @@
-
-
 var database;
 //localStorage.clear();
 var config = {
