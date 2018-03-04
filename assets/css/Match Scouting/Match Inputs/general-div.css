@@ -70,6 +70,11 @@
   left:10px;
 }
 
+#general-auto-div-exchange-cubes {
+  position:absolute;
+  left:317px;
+}
+
 #general-auto-div-cubes-picked-up {
   position:absolute;
   top:171px;
@@ -79,6 +84,17 @@
 #general-auto-div-switch-minus {
   position:relative;
   left:166px;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  top:-8px;
+  text-align:center;
+}
+
+#general-auto-div-exchange-minus {
+  position:relative;
+  left:405px;
   color:#008080;
   background-image:none;
   width:39px;
@@ -108,6 +124,16 @@
   top:101px;
 }
 
+#general-auto-div-exchange-plus {
+  position:absolute;
+  left:573px;
+  color:#008080;
+  background-image:none;
+  width:39px;
+  background-color:white;
+  top:47px;
+}
+
 #general-auto-div-scale-plus {
   position:absolute;
   color:#008080;
@@ -135,6 +161,17 @@
   text-align:center;
   top:48px;
   left:212px;
+  background-color:white;
+  font-weight:800;
+}
+
+#general-auto-exchange-number-input {
+  width:38px;
+  position:absolute;
+  height:37px;
+  text-align:center;
+  top:48px;
+  left:529px;
   background-color:white;
   font-weight:800;
 }

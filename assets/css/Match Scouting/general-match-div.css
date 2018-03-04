@@ -18,6 +18,26 @@
   border-color:white;
 }
 
+#match-position-dropdown {
+  position:absolute;
+  top:65px;
+  left:772px;
+  width:191px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
+#match-color-dropdown {
+  position:absolute;
+  top:117px;
+  left:772px;
+  width:191px;
+  background-color:#008080;
+  color:white;
+  border-color:white;
+}
+
 .match-dropdown {
   width:130px;
   text-align:left;
