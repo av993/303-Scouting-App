@@ -165,6 +165,7 @@ function getPitInfo() {
           "Drivebase Explanation" : $("#drivebase-input").val(),
           "Intake Mechanism" : $("#intake_mechanism-dropdown").val(),
          "Auto" : $("#has-auto-check-c").is(':checked'),
+        "Auto Exchange Cubes" : $('#general-auto-exchange-number-input').val(),
           "Auto Line" : $("#auto-line-check-c").is(':checked'),
           "Auto Scale Cubes" : $("#auto-scale-check-c").is(':checked'),
           "Auto Switch Cubes" : $("#auto-switch-c").is(':checked'),

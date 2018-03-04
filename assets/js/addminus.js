@@ -75,6 +75,15 @@ $("#general-auto-div-switch-plus").click(function(){
    add('#general-auto-scale-number-input');
 });
 
+$("#general-auto-div-exchange-minus").click(function(){
+   subtract('#general-auto-exchange-number-input');
+});
+
+$("#general-auto-div-exchange-plus").click(function(){
+   add('#general-auto-exchange-number-input');
+});
+
+
 $("#general-auto-div-picked-up-minus").click(function(){
    subtract('#general-auto-picked-up-number-input');
 });
