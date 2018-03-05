@@ -1,0 +1,28 @@
+#file-chooser {
+  position:absolute;
+  left:331px;
+  top:367px;
+}
+
+#video {
+  position:absolute;
+  width:400px;
+  top:806px;
+  height:300px;
+  left:361px;
+}
+
+#canvas {
+  position:absolute;
+  width:300px;
+  top:806px;
+  height:300px;
+  left:758px;
+}
+
+#snap {
+  position:absolute;
+  top:818px;
+  left:665px;
+}
+

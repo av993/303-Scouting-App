@@ -11,6 +11,8 @@ var config = {
 
 firebase.initializeApp(config);
 database = firebase.database();    
+var storage = firebase.storage();
+var storageRef = storage.ref();
 
 
 function push() {
@@ -202,3 +204,59 @@ function pitSubmit() {
     //pushToList("Hello", {"Hello": "Chieken"});
     updateFirebase(pitID);    
 }
+
+// Grab elements, create settings, etc.
+var video = document.getElementById('video');
+
+// Get access to the camera!
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        video.src = window.URL.createObjectURL(stream);
+        video.play();
+    });
+}
+
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var video = document.getElementById('video');
+
+// Trigger photo take
+//document.getElementById("snap").addEventListener("click", call());
+/* {
+	/*context.drawImage(video, 0, 0, 400, 480);
+    alert("images");
+    var imageTaken = convertCanvasToImage(canvas);
+    document.getElementById("imageid").src = imageTaken;
+    var storageRefA = firebase.storage().ref();
+    storageRefA.put(imageTaken, "Hello").then(function(snapshot) {
+        alert("Uploaded");
+    });
+    var file = $('#file-chooser').get(0).files[0];
+    alert(file);
+    var refS = firebase.storage().ref();
+    refS.put(file, "Work").then(function(snapshot) {
+        alert(snapshot);
+    });*/
+//});
+
+function call() {
+  alert("Chicken");
+    var file = $('#file-chooser').get(0).files[0];
+    const name = (+new Date()) + '-' + file.name;
+    const metadata = { contentType: file.type };
+    alert(metadata);
+
+    var task = storageRef.put(file);
+    
+}
+
+function convertCanvasToImage(canvas) {
+	var image = new Image();
+	image.src = canvas.toDataURL("image/png");
+	return image;
+}
+
+
+
+
