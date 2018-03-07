@@ -45,33 +45,34 @@
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="match-position-dropdown">
       <option>--Position--</option>
-      <option>303</option>
-      <option>75</option>
-        <option>25</option>
-        <option>1676</option>
-          <option>etc</option>
+      <option>Blue 1</option>
+      <option>Blue 2</option>
+        <option>Blue 3</option>
+        <option>Red 1</option>
+          <option>Red 2</option>
+          <option>Red 3</option>
+    
     </select>
-  </div><div class="form-group">
+  </div><button class="btn btn-default" type="button" id="flip-btn" style="background-image:url(&quot;none&quot;);background-color:rgb(105,180,255);" onclick = "flip()">FLIP</button><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="match-team-dropdown">
       <option>--Team--</option>
-      <option>303</option>
-      <option>75</option>
-        <option>25</option>
-        <option>1676</option>
-          <option>etc</option>
+      <option>Select An Event First</option>
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="match-event-dropdown">
       <option>--Event--</option>
         <option>Mt Olive</option>
-          <option>Red</option>
+          <option>Bridgewater</option>
+        <option>Pittsburgh</option>
+          <option>Detroit</option>
+
     </select>
-  </div><input type="number" id="match-match-input"><span class="label label-default" id="match-match-label" style="font-size:20px;background-color:rgba(58,63,68,0);">Match:</span>
+  </div><input type="number" id="match-match-input"><span class="label label-default" id="match-match-label"
+            style="font-size:20px;background-color:rgba(58,63,68,0);">Match:</span><span class="label label-default"></span><button class="btn btn-default match" type="button" id="start-match-btn" onclick = "startTimer(150)">START MATCH</button><strong id="timer" class="bold-white match">02:30 </strong><span class="label label-default" id="endgame-expand-status">Hidden</span><span class="label label-default" id="auto-expand-status">Hidden</span><span class="label label-default" id="teleop-expand-status">Hidden</span>
         <span
-            class="label label-default"></span><button class="btn btn-default match" type="button" id="start-match-btn" onclick = "startTimer(150)">START MATCH</button><strong id="timer" class="bold-white match">02:30 </strong><span class="label label-default" id="endgame-expand-status">Hidden</span><span class="label label-default" id="auto-expand-status">Hidden</span><span class="label label-default" id="teleop-expand-status">Hidden</span><span class="label label-default"
-                id="match-name-label" style="background-color:rgba(58,63,68,0);font-size:18px;">Name:</span><input type="text" id="match-name-input">
+            class="label label-default" id="match-name-label" style="background-color:rgba(58,63,68,0);font-size:18px;">Name:</span><input type="text" id="match-name-input">
             <div class="show match" id="image-div"><img src="assets/img/RoboticsField.png" id="playingField" class="match"></div>
             <div id="input-div" class="match" style="width:310px;">
                 <div id="event-div"><button class="btn btn-default event-btn" type="button" id="event-switch-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">SWITCH</button><button class="btn btn-default event-btn" type="button"
@@ -80,13 +81,12 @@
                         class="btn btn-default event-btn" type="button" id="event-problem-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">PROBLEM</button><button class="btn btn-default event-btn" type="button" id="event-od-btn" style="background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);font-size:21px;">O/D</button><button class="btn btn-default event-btn"
                             type="button" id="event-pickup-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">PICKUP</button><button class="btn btn-default event-btn" type="button" id="event-exchange-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">EXCHANGE</button></div><div id="scale-div" style="background-color:#076776;"><span class="label label-default" id="scale-label" style="background-color:rgba(119,119,119,0);font-size:24px;">Pickup</span><span class="label label-default" id="scale-time" style="background-color:rgba(119,119,119,0);font-size:24px;">0:25</span>
     <span
-        class="label label-default" id="scale-coordinates" style="background-color:rgba(119,119,119,0);font-size:24px;">(0, 250)</span><button class="btn btn-default" type="button" id="scale-btn-minus" style="background-color:rgb(84,201,217);background-image:url(&quot;none&quot;);color:rgb(255,255,255);"><strong>-</strong></button><input type="text" id="scale-cubes-input"
-            style="background-color:rgb(255,255,255);" /><button class="btn btn-default" type="button" id="scale-btn-plus" style="background-color:rgb(84,201,217);background-image:url(&quot;none&quot;);color:rgb(255,255,255);"><strong>+</strong></button>
+        class="label label-default" id="scale-coordinates" style="background-color:rgba(119,119,119,0);font-size:24px;">(0, 250)</span><input type="text" id="scale-cubes-input"
+            style="background-color:rgb(255,255,255);" />
         <span
             class="label label-default" id="scale-description" style="height:35px;font-size:27px;width:168px;background-color:rgb(63,206,215);"># of Cubes</span>
             <div class="form-group"><label for="exampleFormCotrolSelect1"></label><select class="form-control events-dropdown" id="events-dropdown-pickup"><option>--Intake--</option><option>Ground</option><option>Portal</option><option>Power Cube Zone</option><option>Platform Zone</option><option>Exchange</option></select></div>
-</div><div id="switch-div" style="background-color:rgba(14,79,108,0.51);"><span class="label label-default" id="switch-label" style="background-color:rgba(119,119,119,0);font-size:24px;">Switch</span><input type="text" id="switch-cubes-input" /><button class="btn btn-default"
-        type="button" id="switch-btn-minus" style="background-color:rgb(84,201,217);background-image:url(&quot;none&quot;);color:rgb(255,255,255);"><strong>-</strong></button><button class="btn btn-default" type="button" id="switch--btn-plus" style="background-color:rgb(84,201,217);background-image:url(&quot;none&quot;);color:rgb(255,255,255);"><strong>+</strong></button>
+</div><div id="switch-div" style="background-color:rgba(14,79,108,0.51);"><span class="label label-default" id="switch-label" style="background-color:rgba(119,119,119,0);font-size:24px;">Switch</span><input type="text" id="switch-cubes-input" />
     <span
         class="label label-default" id="switch-time" style="background-color:rgba(119,119,119,0);font-size:24px;">0:25</span><span class="label label-default" id="switch-description" style="height:35px;font-size:27px;width:168px;background-color:rgb(63,206,215);"># of Cubes</span><span class="label label-default" id="switch-coordinates" style="background-color:rgba(119,119,119,0);font-size:24px;">(0, 250)</span></div><div id="penalty-div" style="background-color:#076776;"><span class="label label-default" id="platform-label" style="background-color:rgba(119,119,119,0);font-size:24px;">Penalty</span><span class="label label-default" id="platform-time" style="background-color:rgba(119,119,119,0);font-size:24px;">0:25</span>
     <span
@@ -94,7 +94,7 @@
         <div class="form-group"><label for="exampleFormCotrolSelect1"></label><select class="form-control events-dropdown" id="events-dropdown-platform-problems"><option>--Climb--</option><option>Climb onto bar</option><option>Climb Onto other robot</option><option>Carry other</option><option>Climb with others on bar</option></select></div>
 </div>
                 <button
-                    class="btn btn-default" type="button" id="event-cancel" style="font-size:21px;">CANCEL</button><button class="btn btn-default" type="button" id="event-submit" style="font-size:21px;">SUBMIT</button>
+                    class="btn btn-default" type="button" id="event-submit" style="font-size:21px;">SUBMIT</button><button class="btn btn-default" type="button" id="event-cancel" style="font-size:21px;">CANCEL</button>
                     <div id="general-div" style="background-color:rgba(215,8,8,0);"><button class="btn btn-default" type="button" id="auto-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('auto')"><strong>Autonomous</strong> </button><button class="btn btn-default" type="button" id="teleop-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('teleop')"><strong>TeleOp</strong> </button>
                         <p id="general-auto-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p><button class="btn btn-default" type="button" id="endgame-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('endgame')"><strong>Endgame &amp; Feedback</strong> </button>
                         <p id="general-teleop-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p>
@@ -102,7 +102,7 @@
                         <div id="general-endgame-div" style="background-color:rgba(66,222,82,0.22);"><div class="control-group">
     <label class="control control-checkbox penalty" id ="general-endgame-burnout">
         Burnout/Died
-            <input type="checkbox" checked="checked" id = "dropdown-burnout"/>
+            <input type="checkbox" id = "dropdown-burnout"/>
         <div class="control_indicator"></div>
     </label>
 </div><span class="label label-default" id="general-endgame-penalties-label" style="background-color:rgba(255,255,255,0);font-size:17px;">Penalities/Problems: </span><div class="form-group">
@@ -113,6 +113,7 @@
       <option>Climbed with a buddy </option>
       <option>Climbed with two buddies</option>
        <option>Climbed on another robot</option>
+      <option>Climbed on other robot's platform</option>
       <option>Attempted climb </option>
       <option>Platform</option>
       <option>No platform/climb</option>
@@ -122,33 +123,33 @@
                                 class="label label-default" id="general-endgame-penalties-label" style="background-color:rgba(255,255,255,0);font-size:17px;">Penalities/Problems: </span><div class="control-group">
     <label class="control control-checkbox penalty" id ="general-endgame-tipped-over">
         Tipped Over
-            <input type="checkbox" checked="checked" id = "dropdown-tipped-over"/>
+            <input type="checkbox" id = "dropdown-tipped-over"/>
         <div class="control_indicator"></div>
     </label>
 </div><div class="control-group">
     <label class="control control-checkbox penalty" id ="general-endgame-connection-issues">
         Connection Issues
-            <input type="checkbox" checked="checked" id = "dropdown-connection-issues"/>
+            <input type="checkbox" id = "dropdown-connection-issues"/>
         <div class="control_indicator"></div>
     </label>
 </div><div class="control-group">
     <label class="control control-checkbox penalty" id ="general-endgame-penalties">
         Penalties
-            <input type="checkbox" checked="checked" id = "dropdown-penalties"/>
+            <input type="checkbox" id = "dropdown-penalties"/>
         <div class="control_indicator"></div>
     </label>
 </div><div class="control-group">
     <label class="control control-checkbox penalty" id ="general-endgame-switch-scale-problem">
         Can't place cubes
-            <input type="checkbox" checked="checked" id = "dropdown-cant-place-cubes"/>
+            <input type="checkbox" id = "dropdown-cant-place-cubes"/>
         <div class="control_indicator"></div>
     </label>
-</div><textarea placeholder=" Explain penalties..."
+</div><textarea placeholder=" Notes..."
                                     id="general-endgame-penalties-input"></textarea><input type="text" id="general-teleop-penalty-points"></div>
                         <div id="general-auto-div"><div class="control-group">
     <label class="control control-checkbox" id ="first-chk">
         Auto Line
-            <input type="checkbox" checked="auto-line-chk"/>
+            <input type="checkbox" id = "auto-line-chk"/>
         <div class="control_indicator"></div>
     </label>
 </div><span class="label label-default scale-cubes-auto-general" id="general-auto-div-switch-cubes" style="background-color:rgba(58,63,68,0);font-size:16px;">Scale Cubes:</span><span class="label label-default"
@@ -163,25 +164,29 @@
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="teleop-intake-direction-dropdown">
         <option>--Intake Direction--</option>
-      <option>Front intake</option>
-      <option>Back intake </option>
-         <option>Side intake</option>
+      <option>Front Intake</option>
+      <option>Back Intake </option>
+         <option>Side Intake</option>
+        <option>Front to Back (Through)</option>
+
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="teleop-strategy-dropdown">
         <option>--Strategy Type--</option>
-      <option>Offense focused</option>
-      <option>Defense focused</option>
+      <option>Offense Focused</option>
+      <option>Defense Focused</option>
     </select>
   </div>
 <div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="teleop-cube-manipulator-dropdown">
-        <option>--Cube Manipulator Direction--</option>
-      <option>Front manipulator</option>
-      <option>Back manipulator</option>
-         <option>Side manipulator</option>
+        <option>--Cube Manipulator--</option>
+      <option>Panels</option>
+      <option>Flywheels/Wheel Intake</option>
+         <option>Belt</option>
+     <option>Polycord</option>
+
     </select>
   </div>
 <div class="form-group">
@@ -225,7 +230,6 @@
     <script src="assets/js/general-div.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="assets/js/latefirebase.js"></script>
     <script src="assets/js/latelocal.js"></script>

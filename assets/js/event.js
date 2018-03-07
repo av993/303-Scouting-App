@@ -81,7 +81,7 @@ function openDiv(event) {
     } else if (event == "Pickup") {
         scaleDiv("Pickup");
         var options = {
-            "--Portal--" : "--Pickup--",
+            "--Pickup--" : "--Pickup--",
             "Ground" : "Ground",
             "Portal" : "Portal"
         }
@@ -99,7 +99,7 @@ function openDiv(event) {
     } else if (event == "Penalty") {
         penaltyDiv("Penalty");
         var options = {
-            "--Problem--" : "--Penalty--",
+            "--Penalty--" : "--Penalty--",
             "Burnout" : "Null Territory",
             "Connection Lost" : "Tech Foul"
         }
@@ -107,11 +107,11 @@ function openDiv(event) {
     } else if (event == "OD") {
         penaltyDiv("O/D");
         var options = {
-            "--Problem--" : "--O/D--",
-            "Burnout" : "Offense focused",
-            "Connection Lost" : "Defense focused"
+            "--O/D--" : "--O/D--",
+            "Burnout" : "Offense",
+            "Connection Lost" : "Defense"
         }
-        addSelectOptions("#events-dropdown-platform-problems", options,  "--Penalty--");
+        addSelectOptions("#events-dropdown-platform-problems", options,  "--O/D--");
     }
 }
 
@@ -195,7 +195,6 @@ function submitEvent() {
           pickupCoordinates.push([xr, yr]);
           pickupTime.push(getSeconds());
     } else if (status == "Problem") {
-         //NOT DONE - Check problems based on what is selected
           problemCoordinates.push([xr, yr]);
           problemTime.push(getSeconds());
     } else if (status == "Penalty") {
@@ -205,7 +204,6 @@ function submitEvent() {
           penaltyTime.push(getSeconds());
     } else if (status == "OD") {
         //done
-          $("#teleop-strategy-dropdown").val($("#events-dropdown-platform-problems").val());
           odCoordinates.push([xr, yr]);
           odTime.push(getSeconds());
     }

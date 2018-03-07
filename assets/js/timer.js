@@ -1,8 +1,9 @@
 var secondsOut = 0;
 function startTimer(duration) {
     var done = false;
+    grayStop();
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+   var newInterval =  setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -13,6 +14,7 @@ function startTimer(duration) {
         document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 
         if (timer == 0 && done == false) {
+            clearInterval(newInterval);
             done = true;
         } else {
             timer--;
@@ -24,3 +26,10 @@ function startTimer(duration) {
 function getSeconds() {
     return (150 - secondsOut);
 }
+
+function grayStop() {
+    document.getElementById("start-match-btn").disabled = true;
+}
+
+
+

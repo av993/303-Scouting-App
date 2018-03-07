@@ -255,7 +255,7 @@ $("#levitate-button-1").click(function(){
 function hello() {
  alert("WORKING");
     
-    var fieldID = "Mt Olive Field";  
+    var fieldID = $("#field-event-dropdown") + " Field";  
     var test =  localStorage.getItem(fieldID);
     var testObj = JSON.parse(test);    
     
@@ -266,7 +266,32 @@ function hello() {
          localPush(fieldID, getFieldArray());   
 
     }
+    if (navigator.onLine) {
+        updateFirebase(fieldID); 
+    } else {
+            alert("You are offline. Saving locally...\nWhen you are online, navigate to the Scouting Data tab and upload to the online database.");
+        
+        var statusUP =  localStorage.getItem("status"); 
+        var status = [];
+        if (typeof statusUP == 'undefined' || statusUP == null) {
+            status = [];
+        } else {
+            status = JSON.parse(statusUP);
+        }
 
-    updateFirebase(fieldID); 
+        var exists = false;
+        
+        status.forEach(function(point) {
+            if (point == fieldID) {
+                exists = true;
+            }
+         });
+        
+        if (exists == false) {
+            status.push(fieldID);
+        }
+        
+        localStorage.setItem("status", JSON.stringify(status)); 
+    }
 }
 

@@ -1,3 +1,14 @@
+#flip-btn {
+  position:absolute;
+  top:117px;
+  background-image:none;
+  width:192px;
+  background-color:rgb(105,180,255);
+  font-weight:800;
+  left:773px;
+  border-color:white;
+}
+
 #match-team-dropdown {
   position:absolute;
   top:65px;
@@ -5,6 +16,17 @@
   width:167px;
   background-color:#008080;
   color:white;
+  border-color:white;
+}
+
+#field-event-dropdown {
+  position:absolute;
+  top:189px;
+  font-weight:600;
+  left:508px;
+  width:213px;
+  background-color:#ffffff;
+  color:rgb(10,132,130);
   border-color:white;
 }
 

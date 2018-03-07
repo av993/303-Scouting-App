@@ -1,3 +1,9 @@
+#file-choose {
+  position:absolute;
+  top:391px;
+  left:340px;
+}
+
 #pit-submit-btn {
   position:absolute;
   top:1034px;
@@ -96,12 +102,6 @@
   background-color:#04a3a3;
   color:white;
   border-color:white;
-}
-
-.form-group {
-}
-
-.form-group {
 }
 
 #pit-body {

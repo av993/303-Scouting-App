@@ -47,7 +47,7 @@
                 <div class="control-group">
     <label class="control control-checkbox" id="has-auto-check">
         Has an Auto
-            <input type="checkbox" checked="checked" id="has-auto-check-c">
+            <input type="checkbox" id="has-auto-check-c">
         <div class="control_indicator"></div>
     </label>
 </div>
@@ -61,56 +61,56 @@
                 <div class="control-group">
     <label class="control control-checkbox" id="buddy-climb-on">
         Other robots can climb on them
-            <input type="checkbox" checked="checked" id="buddy-climb-on-c">
+            <input type="checkbox"  id="buddy-climb-on-c">
         <div class="control_indicator"></div>
     </label>
 </div>
                 <div class="control-group">
     <label class="control control-checkbox" id="has-climb">
         Can climb
-            <input type="checkbox" checked="checked" id="has-climb-c">
+            <input type="checkbox"  id="has-climb-c">
         <div class="control_indicator"></div>
     </label>
 </div>
                 <div class="control-group">
     <label class="control control-checkbox" id="climb-on">
         Can climb on other robots
-            <input type="checkbox" checked="checked" id="climb-on-c">
+            <input type="checkbox"  id="climb-on-c">
         <div class="control_indicator"></div>
     </label>
 </div>
                 <div class="control-group">
     <label class="control control-checkbox" id="ground-check">
        Can intake from ground
-            <input type="checkbox" checked="checked" id="ground-check-c">
+            <input type="checkbox"  id="ground-check-c">
         <div class="control_indicator"></div>
     </label>
 </div>
                 <div class="control-group">
     <label class="control control-checkbox" id="portal-check">
         Can intake from portal
-            <input type="checkbox" checked="checked" id="portal-check-c">
+            <input type="checkbox"  id="portal-check-c">
         <div class="control_indicator"></div>
     </label>
 </div>
                 <div class="control-group">
     <label class="control control-checkbox" id="tele-switch-check2">
         Scores cubes on the switch in teleop
-            <input type="checkbox" checked="checked"  id="tele-switch-check2-c">
+            <input type="checkbox"   id="tele-switch-check2-c">
         <div class="control_indicator"></div>
     </label>
 </div>
                 <div class="control-group">
     <label class="control control-checkbox" id="tele-scale-check2">
         Scores cubes on the scale in teleop
-            <input type="checkbox" checked="checked" "tele-scale-check2-c">
+            <input type="checkbox"  "tele-scale-check2-c">
         <div class="control_indicator"></div>
     </label>
 </div>
                 <div class="control-group">
     <label class="control control-checkbox" id="auto-line-check">
        Crosses the auto line
-            <input type="checkbox" checked="checked" id="auto-line-check-c">
+            <input type="checkbox"  id="auto-line-check-c">
         <div class="control_indicator"></div>
     </label>
 </div>
@@ -141,10 +141,13 @@
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="drivebase-dropdown">
         <option>--Drivebase--</option>
-      <option>303</option>
-      <option>4456</option>
-      <option>555</option>
-      <option>8473</option>
+      <option>H-Drive</option>
+      <option>Tank Drive</option>
+      <option>Swerve</option>
+     <option>6 wheels</option>
+    <option>8 wheels</option>
+    <option>Wheeled Tank</option>
+      <option>Drop Center</option>
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
@@ -153,60 +156,65 @@
       <option>Mt Olive</option>
       <option>Bridgewater</option>
       <option>Detroit</option>
-      <option>China</option>
+      <option>Pittsburgh</option>
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="lift_mechanism-dropdown">
-        <option>--Lift Mechanism--</option>
-      <option>303</option>
-      <option>4456</option>
-      <option>555</option>
-      <option>8473</option>
+        <option>--Output--</option>
+      <option>Catapult</option>
+      <option>Flywheel Claw</option>
+      <option>Vertical and Horizontal</option>
+      <option>Turret</option>
+      <option>Punt and Kick</option>
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="cube_manipulator-dropdown">
-        <option>--Cube Manipulator--</option>
-      <option>option 1</option>
-      <option>option 2</option>
-      <option>option 3</option>
-      <option>option 4</option>
+        <option>--Lift Mechanism--</option>
+      <option>Telescoping Elevators</option>
+      <option>Non-Telescoping Elevator</option>
+      <option>Tube Tower</option>
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="intake_direction-dropdown">
-        <option>--Intake Direction--</option>
-      <option>option 1</option>
-      <option>option 2</option>
-      <option>option 3</option>
-      <option>option 4</option>
-    </select>
+        <option>--Intake--</option>
+      <option>Panels</option>
+      <option>Fly Wheels/Wheel Intake</option>
+      <option>Polycord</option>
+     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="wheels-dropdown">
         <option>--Wheels--</option>
-      <option>option 1</option>
-      <option>option 2</option>
-      <option>option 3</option>
-      <option>option 4</option>
+      <option>Omni Wheels</option>
+      <option>Mecanum Wheels</option>
+      <option>High Grip Wheels</option>
+      <option>Colson Wheels</option>
+      <option>Pneumatic</option>
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="motor-dropdown">
-        <option>--Motor--</option>
-      <option>option 1</option>
-      <option>option 2</option>
-      <option>option 3</option>
-      <option>option 4</option>
+        <option>--Cube Manipulation--</option>
+      <option>Single Side</option>
+      <option>Passthrough</option>
+      <option>Pivot Arm</option>
+      <option>Elevator</option>
+      <option>Active Placement</option>
+      <option>Shooter</option>
+      <option>Switch Flipper</option>
+      <option>Any Orientation</option>
+
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="climb_mechanism-dropdown">
-        <option>--Climb Mechanism--</option>
-      <option>option 1</option>
-      <option>option 2</option>
-      <option>option 3</option>
+        <option>--Climber--</option>
+      <option>Like in 2013 sorta on a tube</option>
+      <option>Telescoping Rigid Climbers</option>
+      <option>Winch Climber</option>
       <option>option 4</option>
     </select>
   </div>
@@ -218,13 +226,12 @@
         <script src="assets/js/general-div.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-storage.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
         <script src="assets/js/latefirebase.js"></script>
         <script src="assets/js/latelocal.js"></script>
         <script src="assets/js/matchEvents.js"></script>
         <script src="assets/js/pit-scouting.js"></script>
-        <script src="assets/js/timer.js"></script><button class="btn btn-default" type="button" id="pit-submit-btn" style="background-color:rgb(255,255,255);color:rgb(13,126,124);background-image:url(&quot;none&quot;);font-size:19px;" onclick = "pitSubmit()">SUBMIT</button><video id="video" width="1000" height="2" autoplay></video><canvas id="canvas" width="300" height="300"></canvas><button id="snap" onclick = "call()">Take Photo</button><input type="file" id="file-chooser">
+        <script src="assets/js/timer.js"></script><button class="btn btn-default" type="button" id="pit-submit-btn" style="background-color:rgb(255,255,255);color:rgb(13,126,124);background-image:url(&quot;none&quot;);font-size:19px;" onclick = "pitSubmit()">SUBMIT</button>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/addminus.js"></script>
@@ -234,7 +241,6 @@
     <script src="assets/js/general-div.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
     <script src="assets/js/latefirebase.js"></script>
     <script src="assets/js/latelocal.js"></script>

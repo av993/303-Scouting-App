@@ -1,16 +1,7 @@
 
 function getJSON() {
-    var string = $('#data-event-dropdown').val() + " " + $('#data-type-dropdown').val();
-    firebase.database().ref(string).once('value',      function(snap){
-     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(toArray(snap)));
-      var dlAnchorElem =  document.getElementById('data-json-btn');
-     dlAnchorElem.setAttribute("href",     dataStr     );
-     var path = string + ".json";
-     dlAnchorElem.setAttribute("download", path);
-    })
+
 }
-
-
 
 function toArray(snapshot) {
     var returnArr = [];
@@ -23,3 +14,25 @@ function toArray(snapshot) {
 
     return returnArr;
 };
+
+$('#data-type-dropdown').change(function() {
+    var string = $('#data-event-dropdown').val() + " " + $('#data-type-dropdown').val();
+    firebase.database().ref(string).once('value',      function(snap){
+     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(toArray(snap)));
+      var dlAnchorElem =  document.getElementById('data-json-btn');
+     dlAnchorElem.setAttribute("href",     dataStr     );
+     var path = string + ".json";
+     dlAnchorElem.setAttribute("download", path);
+})});
+
+$('data-event-dropdown').change(function() {
+     var string = $('#data-event-dropdown').val() + " " + $('#data-type-dropdown').val();
+    firebase.database().ref(string).once('value',      function(snap){
+     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(toArray(snap)));
+      var dlAnchorElem =  document.getElementById('data-json-btn');
+     dlAnchorElem.setAttribute("href",     dataStr     );
+     var path = string + ".json";
+     dlAnchorElem.setAttribute("download", path);
+    })
+});
+

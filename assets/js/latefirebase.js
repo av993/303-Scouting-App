@@ -1,13 +1,13 @@
 var database;
 //localStorage.clear();
 var config = {
-    apiKey: "AIzaSyA5cwXZR_JqnpRCLMHiRkXs9vBdJ1YBzsg",
-    authDomain: "scouting-app-fbbfe.firebaseapp.com",
-    databaseURL: "https://scouting-app-fbbfe.firebaseio.com",
-    projectId: "scouting-app-fbbfe",
-    storageBucket: "scouting-app-fbbfe.appspot.com",
-    messagingSenderId: "74718175159"
-};
+    apiKey: "AIzaSyBBbhetoQNcoxN8LFsPSAGLPtuXnQ13rdw",
+    authDomain: "scouting-b2189.firebaseapp.com",
+    databaseURL: "https://scouting-b2189.firebaseio.com",
+    projectId: "scouting-b2189",
+    storageBucket: "",
+    messagingSenderId: "749915509269"
+  };
 
 firebase.initializeApp(config);
 database = firebase.database();    
@@ -26,11 +26,12 @@ function updateFirebase(localID) {
     
     for (var i = 0; i < objArr.length; i++) {
         var pushObj = objArr[i];    
-        alert(JSON.stringify(pushObj));
+        //alert(JSON.stringify(pushObj));
 
         pushToList(localID, pushObj);
      }
     
+    alert("You have successfully upladed your data");
     localStorage.setItem(localID, JSON.stringify([]));
 }
 
@@ -74,15 +75,15 @@ function getMatchInfo() {
         "Auto Cubes Picked Up" : $("#general-auto-cubes-picked-up-number-input").val(),
         "TeleOp Switch Cubes" : $("#general-teleop-switch-cubes-input").val(),
         "TeleOp Scale Cubes" : $("#general-teleop-scale-cubes-input").val(),
-      "Portal Cubes" : $("#general-teleop-portal-cubes-input").val(),
+        "Portal Cubes" : $("#general-teleop-portal-cubes-input").val(),
         "Exchange Cubes" : $("#general-teleop-exchange-cubes-input").val(),
         "Ground Cubes" : $("#general-teleop-ground-cubes-input").val(),
-      "Cube Accuracy" : $("#general-teleop-accuracy-cubes-input").val(),            
-      "Intake Direction" : $("#teleop-intake-direction-dropdown").val(),
-      "Cube Manipulation" : $("#teleop-cube-manipulator-dropdown").val(),
-      "Strategy DO" : $("#teleop-strategy-dropdown").val(),
-      "Prioritize SS" : $("#teleop-priorities-dropdown").val(),
-      "DO Notes" : $("#general-teleop-defense-textarea").val(),
+        "Cube Accuracy" : $("#general-teleop-accuracy-cubes-input").val(),            
+        "Intake Direction" : $("#teleop-intake-direction-dropdown").val(),
+        "Cube Manipulation" : $("#teleop-cube-manipulator-dropdown").val(),
+        "Strategy DO" : $("#teleop-strategy-dropdown").val(),
+        "Prioritize SS" : $("#teleop-priorities-dropdown").val(),
+        "DO Notes" : $("#general-teleop-defense-textarea").val(),
         "Climb" : $("#endgame-climb-dropdown").val(),
         "Burnout Or Died" :  $("#dropdown-burnout").is(':checked'),
         "Tipped Over" :  $("#dropdown-tipped-over").is(':checked'),
@@ -91,17 +92,14 @@ function getMatchInfo() {
         "Penalties" :  $("#dropdown-penalties").is(':checked'),
         "Penalties Score" :  $("#general-teleop-penalty-points").val(),
         "Penalties Description" :  $("#general-endgame-penalties-input").val(),
-          
         "Switch Coordinates" : switchCoordinates,
         "Exchange Coordinates" : exchangeCoordinates,
         "Scale Coordinates" : scaleCoordinates,
         "Pickup Coordinates" : pickupCoordinates,
-       
         "Problem Coordinates" : problemCoordinates,
         "Penalty Coordinates" : penaltyCoordinates,
         //"O/D Coordinates" : odCoordinates,
         "Switch Time" : switchTime,
-        
         "Exchange Time" : exchangeTime,
         "Scale Time" : scaleTime,
         "Pickup Time" : pickupTime, 
@@ -114,6 +112,7 @@ function getMatchInfo() {
 }
 
 function submitMatch() {
+    graySubmit();
     var matchInfo = getMatchInfo();
 
     for (var key in matchInfo) {
@@ -125,7 +124,8 @@ function submitMatch() {
             }
         }
     }
-    var matchID = "Mt Olive Match";  
+    var matchID = $("#match-event-dropdown").val() +  " Match";  
+    alert(matchID);
     var test =  localStorage.getItem(matchID);
     var testObj = JSON.parse(test);
      
@@ -140,7 +140,38 @@ function submitMatch() {
     
     if (navigator.onLine) {
         updateFirebase(matchID);
+    } 
+    else {
+        alert("You are offline. Saving locally...\nWhen you are online, navigate to the Scouting Data tab and upload to the online database.");
+        
+        var statusUP =  localStorage.getItem("status"); 
+        var status = [];
+        if (typeof statusUP == 'undefined' || statusUP == null) {
+            status = [];
+            alert("CAlled");
+        } else {
+            status = JSON.parse(statusUP);
+            alert("CAlled 1");
+        }
+
+        var exists = false;
+        
+        status.forEach(function(point) {
+            if (point == matchID) {
+                exists = true;
+            }
+         });
+        
+        if (exists == false) {
+            status.push(matchID);
+        }
+        
+        localStorage.setItem("status", JSON.stringify(status)); 
     }
+    
+    alert(localStorage.getItem("status"));
+    alert(localStorage.getItem(matchID));
+
 }
 
 function setMatchText(field, text) {
@@ -149,7 +180,8 @@ function setMatchText(field, text) {
 
 function localPush(localID, item) {
     var object =  localStorage.getItem(localID); 
-    var objectParse = JSON.parse(object);         objectParse.push(item);
+    var objectParse = JSON.parse(object);         
+    objectParse.push(item);
     localStorage.setItem(localID, JSON.stringify(objectParse));   
 }
 
@@ -157,7 +189,7 @@ function fetch(localID) {
     var retrievedObj = localStorage.getItem("Mt Olive");
     var obj = JSON.parse(retrievedObj); 
     document.getElementById('test-p').innerHTML = retrievedObj;
-}
+} 
 
 function getPitInfo() { 
    var data = {
@@ -166,8 +198,8 @@ function getPitInfo() {
           "Drivebase" : $("#drivebase-dropdown").val(),
           "Drivebase Explanation" : $("#drivebase-input").val(),
           "Intake Mechanism" : $("#intake_mechanism-dropdown").val(),
-         "Auto" : $("#has-auto-check-c").is(':checked'),
-        "Auto Exchange Cubes" : $('#general-auto-exchange-number-input').val(),
+          "Auto" : $("#has-auto-check-c").is(':checked'),
+          "Auto Exchange Cubes" : $('#general-auto-exchange-number-input').val(),
           "Auto Line" : $("#auto-line-check-c").is(':checked'),
           "Auto Scale Cubes" : $("#auto-scale-check-c").is(':checked'),
           "Auto Switch Cubes" : $("#auto-switch-c").is(':checked'),
@@ -189,7 +221,7 @@ function getPitInfo() {
 }
 
 function pitSubmit() {    
-    var pitID = "Mt Olive Pit";  
+    var pitID = $("#intake_mechanism-dropdown") + " Pit";  
     var test =  localStorage.getItem(pitID);
     var testObj = JSON.parse(test);    
     
@@ -199,64 +231,35 @@ function pitSubmit() {
     } else {            
          localPush(pitID, getPitInfo());   
     }
-    alert($('#buddy-climb-on')[0].checked);
-;
-    //pushToList("Hello", {"Hello": "Chieken"});
-    updateFirebase(pitID);    
+    if (navigator.onLine) {
+        updateFirebase(pitID);
+    } else {
+           alert("You are offline. Saving locally...\nWhen you are online, navigate to the Scouting Data tab and upload to the online database.");
+        
+        var statusUP =  localStorage.getItem("status"); 
+        var status = [];
+        if (typeof statusUP == 'undefined' || statusUP == null) {
+            status = [];
+        } else {
+            status = JSON.parse(statusUP);
+        }
+
+        var exists = false;
+        
+        status.forEach(function(point) {
+            if (point == pitID) {
+                exists = true;
+            }
+         });
+        
+        if (exists == false) {
+            status.push(pitID);
+        }
+        
+        localStorage.setItem("status", JSON.stringify(status));
+    }
 }
 
-// Grab elements, create settings, etc.
-var video = document.getElementById('video');
-
-// Get access to the camera!
-if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    // Not adding `{ audio: true }` since we only want video now
-    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-        video.src = window.URL.createObjectURL(stream);
-        video.play();
-    });
+function graySubmit() {
+    document.getElementById("general-submit").disabled = true;
 }
-
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext('2d');
-var video = document.getElementById('video');
-
-// Trigger photo take
-//document.getElementById("snap").addEventListener("click", call());
-/* {
-	/*context.drawImage(video, 0, 0, 400, 480);
-    alert("images");
-    var imageTaken = convertCanvasToImage(canvas);
-    document.getElementById("imageid").src = imageTaken;
-    var storageRefA = firebase.storage().ref();
-    storageRefA.put(imageTaken, "Hello").then(function(snapshot) {
-        alert("Uploaded");
-    });
-    var file = $('#file-chooser').get(0).files[0];
-    alert(file);
-    var refS = firebase.storage().ref();
-    refS.put(file, "Work").then(function(snapshot) {
-        alert(snapshot);
-    });*/
-//});
-
-function call() {
-  alert("Chicken");
-    var file = $('#file-chooser').get(0).files[0];
-    const name = (+new Date()) + '-' + file.name;
-    const metadata = { contentType: file.type };
-    alert(metadata);
-
-    var task = storageRef.put(file);
-    
-}
-
-function convertCanvasToImage(canvas) {
-	var image = new Image();
-	image.src = canvas.toDataURL("image/png");
-	return image;
-}
-
-
-
-
