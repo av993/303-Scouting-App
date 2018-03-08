@@ -1,12 +1,12 @@
 var database;
 //localStorage.clear();
 var config = {
-    apiKey: "AIzaSyBBbhetoQNcoxN8LFsPSAGLPtuXnQ13rdw",
-    authDomain: "scouting-b2189.firebaseapp.com",
-    databaseURL: "https://scouting-b2189.firebaseio.com",
-    projectId: "scouting-b2189",
+    apiKey: "AIzaSyAbLk6S0r3PKzpTiIPv0hyFOYiSFP4VI_c",
+    authDomain: "scouting-app-841ee.firebaseapp.com",
+    databaseURL: "https://scouting-app-841ee.firebaseio.com",
+    projectId: "scouting-app-841ee",
     storageBucket: "",
-    messagingSenderId: "749915509269"
+    messagingSenderId: "481056362945"
   };
 
 firebase.initializeApp(config);
