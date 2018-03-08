@@ -113,7 +113,7 @@ function getMatchInfo() {
 
 function submitMatch() {
     var matchInfo = getMatchInfo();
-
+    alert("Called");
     for (var key in matchInfo) {
         if (matchInfo.hasOwnProperty(key)) {
             if ($.isArray(matchInfo[key])) {
