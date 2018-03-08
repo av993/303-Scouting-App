@@ -1,3 +1,9 @@
+#field-status-label {
+  position:absolute;
+  top:332px;
+  left:58px;
+}
+
 #match-num-input {
   position:absolute;
   top:103px;

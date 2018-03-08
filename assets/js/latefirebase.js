@@ -23,16 +23,16 @@ function updateFirebase(localID) {
     var retrievedObj = localStorage.getItem(localID); 
     var objArr = JSON.parse(retrievedObj);
     var count = 0;
-    
+
     for (var i = 0; i < objArr.length; i++) {
         var pushObj = objArr[i];    
         //alert(JSON.stringify(pushObj));
-
         pushToList(localID, pushObj);
      }
-    
-    alert("You have successfully upladed your data");
+
     localStorage.setItem(localID, JSON.stringify([]));
+    alert("You have successfully uploaded the data for " + localID);
+    
 }
 
 function pushToList(reference, item) {
@@ -112,7 +112,6 @@ function getMatchInfo() {
 }
 
 function submitMatch() {
-    graySubmit();
     var matchInfo = getMatchInfo();
 
     for (var key in matchInfo) {
@@ -125,7 +124,11 @@ function submitMatch() {
         }
     }
     var matchID = $("#match-event-dropdown").val() +  " Match";  
-    alert(matchID);
+    if ($("#match-event-dropdown").val() == "--Event--") {
+        alert("You need to enter the event");
+    }  else {
+        
+    graySubmit();
     var test =  localStorage.getItem(matchID);
     var testObj = JSON.parse(test);
      
@@ -148,10 +151,8 @@ function submitMatch() {
         var status = [];
         if (typeof statusUP == 'undefined' || statusUP == null) {
             status = [];
-            alert("CAlled");
         } else {
             status = JSON.parse(statusUP);
-            alert("CAlled 1");
         }
 
         var exists = false;
@@ -168,9 +169,7 @@ function submitMatch() {
         
         localStorage.setItem("status", JSON.stringify(status)); 
     }
-    
-    alert(localStorage.getItem("status"));
-    alert(localStorage.getItem(matchID));
+    }
 
 }
 
@@ -220,8 +219,11 @@ function getPitInfo() {
     return data;
 }
 
-function pitSubmit() {    
-    var pitID = $("#intake_mechanism-dropdown") + " Pit";  
+function pitSubmit() {   
+    if ($("#intake_mechanism-dropdown").val() == "--Event--") {
+        alert("You have to choose an event");
+    } else {
+    var pitID = $("#intake_mechanism-dropdown").val() + " Pit";  
     var test =  localStorage.getItem(pitID);
     var testObj = JSON.parse(test);    
     
@@ -257,6 +259,7 @@ function pitSubmit() {
         }
         
         localStorage.setItem("status", JSON.stringify(status));
+    }
     }
 }
 

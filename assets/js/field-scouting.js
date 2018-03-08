@@ -253,9 +253,12 @@ $("#levitate-button-1").click(function(){
 
 
 function hello() {
- alert("WORKING");
+    if ($("#field-event-dropdown").val() == "--Event--") {
+        alert("You need to choose an event");
+    } else {
+        
     
-    var fieldID = $("#field-event-dropdown") + " Field";  
+    var fieldID = $("#field-event-dropdown").val() + " Field";  
     var test =  localStorage.getItem(fieldID);
     var testObj = JSON.parse(test);    
     
@@ -292,6 +295,7 @@ function hello() {
         }
         
         localStorage.setItem("status", JSON.stringify(status)); 
+    }
     }
 }
 

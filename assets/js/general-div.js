@@ -1,3 +1,26 @@
+if (navigator.onLine) {
+    document.getElementById("field-status-label").innerHTML = "Online";
+    document.getElementById('field-status-label').style.color = "#39ff41";
+    $("#field-upload").prop("disabled",false);
+
+} else {
+    document.getElementById("field-status-label").innerHTML = "Offline";
+    document.getElementById('field-status-label').style.color = "#ef4747";
+    $("#field-upload").prop("disabled",true);
+}
+
+function uploadLocal() {
+    
+    var currentStatus = localStorage.getItem("status");
+    alert(currentStatus);
+    var statusArr = JSON.parse(currentStatus);
+    statusArr.forEach(function(id) {
+        updateFirebase(id);
+    });
+    localStorage.setItem("status", JSON.stringify([]));
+
+}
+
 function expandGeneral(type) {
     var autoDiv = 'general-auto-div';
     var teleopDiv = 'general-teleop-div';
