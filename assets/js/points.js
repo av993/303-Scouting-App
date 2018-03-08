@@ -1,5 +1,5 @@
 function updatePoints() {
-    var el = document.getElementById('data-image-div-div');
+    $("div").remove(".point");
 
     
     firebase.database().ref($("#data-event-points").val() +  " Match").once('value', function(snap){
@@ -50,7 +50,7 @@ function toArrayPoints(snapshot) {
         var color = '#d92f24';
         var size = '10px';
         $("#data-image-div-div").append(
-            $('<div></div>')
+            $('<div class = "point"></div>')
                 .css('position', 'absolute')
                 .css('top', points[1] + 'px')
                 .css('left', points[0] + 'px')
@@ -65,7 +65,7 @@ function toArrayPoints(snapshot) {
         var color = '#d92f24';
         var size = '10px';
         $("#data-image-div-div").append(
-            $('<div></div>')
+            $('<div class = "point"></div>')
                 .css('position', 'absolute')
                 .css('top', points[1] + 'px')
                 .css('left', points[0] + 'px')
@@ -80,7 +80,7 @@ function toArrayPoints(snapshot) {
         var color = '#d92f24';
         var size = '10px';
         $("#data-image-div-div").append(
-            $('<div></div>')
+            $('<div class = "point"></div>')
                 .css('position', 'absolute')
                 .css('top', points[1] + 'px')
                 .css('left', points[0] + 'px')
@@ -95,7 +95,7 @@ function toArrayPoints(snapshot) {
         var color = '#d92f24';
         var size = '10px';
         $("#data-image-div-div").append(
-            $('<div></div>')
+            $('<div class = "point"></div>')
                 .css('position', 'absolute')
                 .css('top', points[1] + 'px')
                 .css('left', points[0] + 'px')
@@ -110,7 +110,7 @@ function toArrayPoints(snapshot) {
         var color = '#d92f24';
         var size = '10px';
         $("#data-image-div-div").append(
-            $('<div></div>')
+            $('<div class = "point"></div> ')
                 .css('position', 'absolute')
                 .css('top', points[1] + 'px')
                 .css('left', points[0] + 'px')
@@ -125,7 +125,7 @@ function toArrayPoints(snapshot) {
         var color = '#d92f24';
         var size = '10px';
         $("#data-image-div-div").append(
-            $('<div></div>')
+            $('<div class = "point"></div>')
                 .css('position', 'absolute')
                 .css('top', points[1] + 'px')
                 .css('left', points[0] + 'px')

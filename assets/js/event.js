@@ -96,7 +96,9 @@ function openDiv(event) {
         var options = {
             "--Problem--" : "--Problem--",
             "Burnout" : "Burnout",
-            "Connection Lost" : "Connection Lost"
+            "Connection Lost" : "Connection Lost",
+            "Tipped Over" : "Tipped Over",
+            "Can't place cube" : "Can't place cube",
         }
         addSelectOptions("#events-dropdown-platform-problems", options,  "--Problem--");
     
@@ -104,8 +106,12 @@ function openDiv(event) {
         penaltyDiv("Penalty");
         var options = {
             "--Penalty--" : "--Penalty--",
-            "Burnout" : "Null Territory",
-            "Connection Lost" : "Tech Foul"
+            "Foul" : "Foul",
+            "Tech Foul" : "Tech Foul",
+            "Yellow Card" : "Yellow Card",
+            "Red Card" : "Red Card",
+            "Disabled" : "Disabled",
+            "Disqualified" : "Disqualified"
         }
         addSelectOptions("#events-dropdown-platform-problems", options,  "--Penalty--");
     } else if (event == "OD") {

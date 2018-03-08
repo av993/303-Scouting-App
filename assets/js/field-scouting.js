@@ -27,11 +27,13 @@ function startFieldTimer(duration) {
     var interval1 = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
+        secondsOutside = (minutes * 60) + seconds;
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-        secondsOutside = (minutes * 60) + seconds;
+        
 
+        
         document.getElementById("field-timer").innerHTML = minutes + ":" + seconds;
 
         if (timer == 0 && done == false) {
