@@ -41,13 +41,22 @@
         </div>
         </div>
     </nav><a class="btn btn-default" role="button" href="#" id="data-json-btn" onclick = "getJSON()">GET JSON</a><a class="btn btn-default" role="button" href="http://www.convertcsv.com/json-to-csv.htm" target="_blank" id="data-link" style="background-color:rgb(46,188,103);">CONVERT : JSON TO EXCEL</a><span class="label label-default"
-        id="field-status-label" style="background-color:rgba(58,63,68,0);font-size:14px;color:#39ff41;">Label</span><button class="btn btn-default" type="button" id="field-upload" onclick = "uploadLocal()">UPLOAD LOCAL DATA TO ONLINE DATABASE</button><button class="btn btn-default" type="button" disabled="disabled" id="data-excel-btn">DOWNLOAD EXCEL</button><div class="form-group">
+        id="field-status-label" style="background-color:rgba(58,63,68,0);font-size:14px;color:#39ff41;">Label</span><button class="btn btn-default" type="button" id="field-upload" onclick = "uploadLocal()">UPLOAD LOCAL DATA TO ONLINE DATABASE</button><button class="btn btn-default" type="button">Button</button>
+    <div id="data-image-div-div"><img src="assets/img/RoboticsField.png" id="data-image-div"></div><button class="btn btn-default" type="button" disabled="disabled" id="data-excel-btn">DOWNLOAD EXCEL</button><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="data-type-dropdown">
       <option>--Type--</option>
       <option>Match</option>
       <option>Pit</option>
         <option>Field</option>
+    </select>
+  </div><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="data-team-points">
+      <option>--Team--</option>
+      <option>11</option>
+      <option>303</option>
+        <option>70</option>
     </select>
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
@@ -58,7 +67,36 @@
         <option>Pittsburgh</option>
         <option>Detroit</option>
     </select>
-  </div>
+  </div><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="data-event-dropdown">
+      <option>--Event--</option>
+      <option>Mt Olive</option>
+      <option>Bridgewater</option>
+        <option>Pittsburgh</option>
+        <option>Detroit</option>
+    </select>
+  </div><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="data-event-points">
+      <option>--Event--</option>
+      <option>Mt Olive</option>
+      <option>Bridgewater</option>
+        <option>Pittsburgh</option>
+        <option>Detroit</option>
+    </select>
+  </div><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="data-type-points">
+      <option>--Type--</option>
+      <option>Switch</option>
+      <option>Scale</option>
+        <option>Exchange</option>
+        <option>Problem</option>
+        <option>Penalty</option>
+4
+    </select>
+  </div><button class="btn btn-default" type="button" id="data-update-btn" onclick = "updatePoints()">UPDATE</button>
     <script
         src="assets/js/jquery.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -74,6 +112,7 @@
         <script src="assets/js/latelocal.js"></script>
         <script src="assets/js/matchEvents.js"></script>
         <script src="assets/js/pit-scouting.js"></script>
+        <script src="assets/js/points.js"></script>
         <script src="assets/js/scouting-data.js"></script>
         <script src="assets/js/timer.js"></script>
         <script src="assets/js/video.js"></script>

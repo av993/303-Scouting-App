@@ -12,8 +12,12 @@ $(document).ready(function() {
     $('#scale-cubes-input').css('font-weight','800');
     
     $('#image-div').click(function(e) {
+        
         var offset = $(this).offset();
         printMouse((e.pageX - offset.left), (e.pageY - offset.top));
+        mouseX = e.pageX;
+        mouseY = e.pageY
+        //alert(mouseX + ' ' + mouseY);
     });
     
     $('#start-match').click(function(e) {

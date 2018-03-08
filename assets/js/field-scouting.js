@@ -21,6 +21,8 @@ var rl = 0;
 
 function startFieldTimer(duration) {
     var done = false;
+    document.getElementById("start-match").disabled = true;
+
     var timer = duration, minutes, seconds;
     var interval1 = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
@@ -28,7 +30,6 @@ function startFieldTimer(duration) {
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-        
         secondsOutside = (minutes * 60) + seconds;
 
         document.getElementById("field-timer").innerHTML = minutes + ":" + seconds;
@@ -74,7 +75,7 @@ function timer(duration, kind) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         
-        secondsOutside = (minutes * 60) + seconds;
+       // secondsOutside = (minutes * 60) + seconds;
 
         document.getElementById("powerup-timer").innerHTML = minutes + ":" + seconds;
         
@@ -144,7 +145,7 @@ function highlightButton(btnid, kind){
     }
     
     var goodSeconds = 150 - secondsOutside;
-    
+   
     switch (kind) {
         case "rf1" :
             rf1 = goodSeconds;
@@ -219,8 +220,6 @@ $("#boost-button-3-r").click(function(){
 $("#levitate-button-1-r").click(function(){
     highlightButton("levitate-button-1-r", "rl");
 });
-
-
 
 $("#force-button-1").click(function(){
     highlightButton("force-button-1", "bf1");

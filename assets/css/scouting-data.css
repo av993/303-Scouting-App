@@ -1,3 +1,29 @@
+#data-update-btn {
+  position:absolute;
+  top:501px;
+  left:327px;
+  background-color:#0ec5c5;
+  background-image:none;
+}
+
+#data-image-div {
+  position:relative;
+  top:0px;
+  width:600px;
+  left:0px;
+}
+
+#data-image-div-div {
+}
+
+#data-image-div-div {
+  position:absolute;
+  top:558px;
+  width:600px;
+  height:230px;
+  left:78px;
+}
+
 #field-upload {
   position:absolute;
   top:368px;
@@ -42,11 +68,44 @@
   border-color:white;
 }
 
+#data-event-points {
+  position:absolute;
+  top:442px;
+  width:194px;
+  left:57px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+
 #data-type-dropdown {
   position:absolute;
   top:83px;
   width:264px;
   left:357px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+
+#data-team-points {
+  position:absolute;
+  top:440px;
+  width:190px;
+  left:279px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+
+#data-type-points {
+  position:absolute;
+  top:440px;
+  width:190px;
+  left:498px;
   background-color:#04a3a3;
   color:white;
   border-width:1px;

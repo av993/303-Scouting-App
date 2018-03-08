@@ -65,7 +65,7 @@ function snapshotToArray(snapshot) {
 function getMatchInfo() {
     var matchArr = 
     {
-     "Team"    :    $('#match-team-dropdown').val(),
+        "Team"    :    $('#match-team-dropdown').val(),
         "Name"    :    $('#match-name-input').val(),
         "Match"   :    $('#match-match-input').val(),
         "Event"   :    $('#match-event-dropdown').val(),
@@ -196,7 +196,7 @@ function getPitInfo() {
           "Team" : $("#team-dropdown").val(),      
           "Drivebase" : $("#drivebase-dropdown").val(),
           "Drivebase Explanation" : $("#drivebase-input").val(),
-          "Intake Mechanism" : $("#intake_mechanism-dropdown").val(),
+          "Event" : $("#intake_mechanism-dropdown").val(),
           "Auto" : $("#has-auto-check-c").is(':checked'),
           "Auto Exchange Cubes" : $('#general-auto-exchange-number-input').val(),
           "Auto Line" : $("#auto-line-check-c").is(':checked'),
@@ -210,11 +210,11 @@ function getPitInfo() {
           "Buddy Climb" : $("#buddy-climb-on-c").is(':checked'),
           "Climb on Other Robots" : $("#climb-on-c").is(':checked'),
           "TeleOp Cube Number" : $("#climb-num-input").val(),
-          "Lift Mechanism" : $("#lift_mechanism-dropdown").val(),
-          "Intake Direction" : $("#intake_direction-dropdown").val(),
+          "Output" : $("#lift_mechanism-dropdown").val(),
+          "Intake" : $("#intake_direction-dropdown").val(),
           "Wheels" : $("#wheels-dropdown").val(),
-          "Motor" : $("#motor-dropdown").val(),
-          "Climb Mechanism" : $("#climb _mechanism-dropdown").val()
+          "Cube Manipulation" : $("#motor-dropdown").val(),
+          "Climber" : $("#climb _mechanism-dropdown").val()
     }
     return data;
 }

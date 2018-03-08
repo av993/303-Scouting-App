@@ -17,7 +17,7 @@ $('#match-event-dropdown').change(function() {
        MtOliveTeams.forEach(function(element) {
             $('#match-team-dropdown').append($('<option>', 
             {
-                value: 1,
+                value: element.toString(),
                 text: element.toString()
             }));
        });
@@ -28,7 +28,7 @@ $('#match-event-dropdown').change(function() {
        BridgewaterTeams.forEach(function(element) {
             $('#match-team-dropdown').append($('<option>', 
             {
-                value: 1,
+                value: element.toString(),
                 text: element.toString()
             }));
        });
@@ -39,7 +39,45 @@ $('#match-event-dropdown').change(function() {
        PittsburghTeams.forEach(function(element) {
             $('#match-team-dropdown').append($('<option>', 
             {
-                value: 1,
+                value: element.toString(),
+                text: element.toString()
+            }));
+       });
+    }
+});
+
+$('#intake_mechanism-dropdown').change(function() {
+   var eventName = $(this).val();
+    if (eventName == 'Mt Olive') {
+      // alert(eventName);
+        $('#team-dropdown').empty();
+
+       MtOliveTeams.forEach(function(element) {
+            $('#team-dropdown').append($('<option>', 
+            {
+                value: element.toString(),
+                text: element.toString()
+            }));
+       });
+    } else if (eventName == 'Bridgewater') {
+      // alert(eventName);
+        $('#team-dropdown').empty();
+
+       BridgewaterTeams.forEach(function(element) {
+            $('#team-dropdown').append($('<option>', 
+            {
+                value: element.toString(),
+                text: element.toString()
+            }));
+       });
+    } else if (eventName == 'Pittsburgh') {
+      // alert(eventName);
+        $('#team-dropdown').empty();
+
+       PittsburghTeams.forEach(function(element) {
+            $('#team-dropdown').append($('<option>', 
+            {
+                value: element.toString(),
                 text: element.toString()
             }));
        });
@@ -47,6 +85,43 @@ $('#match-event-dropdown').change(function() {
 });
 
 
+$('#data-event-points').change(function() {
+   var eventName = $(this).val();
+    if (eventName == 'Mt Olive') {
+      // alert(eventName);
+        $('#data-team-points').empty();
+
+       MtOliveTeams.forEach(function(element) {
+            $('#data-team-points').append($('<option>', 
+            {
+                value: element.toString(),
+                text: element.toString()
+            }));
+       });
+    } else if (eventName == 'Bridgewater') {
+      // alert(eventName);
+        $('#data-team-points').empty();
+
+       BridgewaterTeams.forEach(function(element) {
+            $('#data-team-points').append($('<option>', 
+            {
+                value: element.toString(),
+                text: element.toString()
+            }));
+       });
+    } else if (eventName == 'Pittsburgh') {
+      // alert(eventName);
+        $('#data-team-points').empty();
+
+       PittsburghTeams.forEach(function(element) {
+            $('#data-team-points').append($('<option>', 
+            {
+                value: element.toString(),
+                text: element.toString()
+            }));
+       });
+    }
+});
 
 
 $("#general-teleop-dropdown-intake-direction : selected").text();
@@ -55,4 +130,22 @@ $('#dropdown-burnout').attr('checked', false);
 function clearLocal() {
     localStorage.remove("Mt Olive");
 }
+
+       $("#image-div").click(function (ev) {
+        mouseX = ev.pageX;
+        mouseY = ev.pageY
+        //alert(mouseX + ' ' + mouseY);
+        var color = '#008080';
+        var size = '1px';
+        $("body").append(
+            $('<div></div>')
+                .css('position', 'absolute')
+                .css('top', mouseY + 'px')
+                .css('left', mouseX + 'px')
+                .css('width', size)
+                .css('height', size)
+                .css('background-color', color)
+        );
+    })
+
 
