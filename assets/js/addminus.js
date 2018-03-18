@@ -2,10 +2,23 @@ function add(id){
     $(id).val( parseInt($(id).val()) + 1);
      $(id).val(parseInt($(id).val()) || 1);
 }
+$('#general-teleop-switch-cubes-input').val(0);
+$('#general-teleop-scale-cubes-input').val(0);
+$('#general-teleop-portal-cubes-input').val(0);
+$('#general-teleop-exchange-cubes-input').val(0);
+$('#general-teleop-ground-cubes-input').val(0);
+$('#general-teleop-missed-cubes-input').val(0);
+$('#general-auto-switch-number-input').val(0);
+$('#general-auto-scale-number-input').val(0);
+$('#general-auto-exchange-number-input').val(0);
+$('#general-auto-cubes-picked-up-number-input').val(0);
+
 
 function subtract(id){
     $(id).val( parseInt($(id).val()) - 1);    
 }
+
+
 
 $("#general-teleop-switch-cubes-plus").click(function(){
    add('#general-teleop-switch-cubes-input');
@@ -53,6 +66,14 @@ $("#general-teleop-ground-cubes-plus").click(function(){
 
 $("#general-teleop-ground-cubes-minus").click(function(){
    subtract('#general-teleop-ground-cubes-input');
+});
+
+$("#general-teleop-missed-cubes-plus").click(function(){
+   add('#general-teleop-missed-cubes-input');
+});
+
+$("#general-teleop-missed-cubes-minus").click(function(){
+   subtract('#general-teleop-missed-cubes-input');
 });
 
 $("#general-teleop-accuracy-cubes-plus").click(function(){

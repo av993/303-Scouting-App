@@ -1,9 +1,15 @@
+#plays-defense {
+  position:absolute;
+  top:50px;
+  left:328px;
+}
+
 #general-teleop-div {
   position:absolute;
   top:101px;
   display:none;
   background-color:white;
-  height:350px;
+  height:290px;
   width:700px;
 }
 
@@ -11,6 +17,39 @@
   position:absolute;
   top:22px;
   left:20px;
+}
+
+#general-teleop-missed-cubes-plus {
+  position:absolute;
+  top:15px;
+  left:596px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-missed-cubes-input {
+  position:absolute;
+  top:14px;
+  left:236px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-missed-cubes-minus {
+  position:absolute;
+  top:15px;
+  left:498px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
+#general-teleop-missed-cubes-label {
+  position:absolute;
+  top:22px;
+  left:339px;
 }
 
 #general-teleop-ground-cubes-label {
@@ -160,6 +199,15 @@
   font-weight:800;
 }
 
+#general-teleop-missed-cubes-input {
+  position:absolute;
+  top:15px;
+  left:546px;
+  width:40px;
+  height:40px;
+  font-weight:800;
+}
+
 #general-teleop-scale-cubes-input {
   position:absolute;
   top:71px;
@@ -297,8 +345,8 @@
 #teleop-priorities-dropdown {
   width:330px;
   position:absolute;
-  top:294px;
-  left:182px;
+  top:108px;
+  left:344px;
   background-color:#008080;
   color:white;
   border-color:white;

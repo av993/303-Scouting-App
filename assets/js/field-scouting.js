@@ -17,6 +17,7 @@ var rf1 = 0;
 var rf2 = 0;
 var rf3 = 0;
 var rl = 0;
+var fieldConfig = 1;
 
 
 function startFieldTimer(duration) {
@@ -62,7 +63,9 @@ function getFieldArray() {
         "Red Force 1" : rf1,
         "Red Force 2" : rf2,
         "Red Force 3" : rf3,
-        "Red Levitate" : rl 
+        "Red Levitate" : rl,
+        "Field Configuration": fieldConfig
+        
     }
     return data;
 }
@@ -123,13 +126,17 @@ function grayButtons(kind) {
      if (kind == "bl"){
         document.getElementById("levitate-button-1").disabled = true;
     }
-    
 }
 
-function highlightButton(btnid, kind){
+function highlightButton(btnid, kind) {
     
-    timer(10, kind);
-    
+    grayButtons(kind);  
+
+    if (kind == "bl" || kind == "rl") {
+        //Do nothing
+    } else {
+        timer(10, kind);
+    }
    var property = document.getElementById(btnid);
    var originalColor = property.style.backgroundColor;
     
@@ -256,9 +263,11 @@ $("#levitate-button-1").click(function(){
 function hello() {
     if ($("#field-event-dropdown").val() == "--Event--") {
         alert("You need to choose an event");
-    } else {
-        
-    
+    } 
+    else if($("#match-num-input").val()==""){
+            alert("You need to choose a valid match number");
+            }
+    else { 
     var fieldID = $("#field-event-dropdown").val() + " Field";  
     var test =  localStorage.getItem(fieldID);
     var testObj = JSON.parse(test);    
@@ -299,4 +308,92 @@ function hello() {
     }
     }
 }
+document.getElementById("switch-bottom-btn-2").style.backgroundColor = "#007bff"; 
+document.getElementById("switch-top-btn").style.backgroundColor = "#FF0000"; 
+document.getElementById("switch-top-btn-2").style.backgroundColor = "#FF0000"; 
+document.getElementById("switch-bottom-btn").style.backgroundColor = "#007bff";
+document.getElementById("scale-top-btn").style.backgroundColor = "#FF0000"; 
+document.getElementById("scale-bottom-btn").style.backgroundColor = "#007bff";
+
+$("#switch-top-btn").click(function(){
+    changeBlueRed("switch-top-btn");
+    changeBlueRed("switch-top-btn-2");
+     changeBlueRed("switch-bottom-btn");
+    changeBlueRed("switch-bottom-btn-2");
+});
+
+$("#switch-bottom-btn").click(function(){
+    changeBlueRed("switch-top-btn");
+    changeBlueRed("switch-top-btn-2");
+     changeBlueRed("switch-bottom-btn");
+    changeBlueRed("switch-bottom-btn-2");
+});
+
+$("#switch-top-btn-2").click(function(){
+    changeBlueRed("switch-top-btn");
+    changeBlueRed("switch-top-btn-2");
+     changeBlueRed("switch-bottom-btn");
+    changeBlueRed("switch-bottom-btn-2");
+});
+
+$("#switch-bottom-btn-2").click(function(){
+   changeBlueRed("switch-top-btn");
+    changeBlueRed("switch-top-btn-2");
+     changeBlueRed("switch-bottom-btn");
+    changeBlueRed("switch-bottom-btn-2");
+});
+
+
+
+$("#scale-top-btn").click(function(){
+    changeBlueRed("scale-bottom-btn");
+    changeBlueRed("scale-top-btn");
+});
+
+ 
+$("#scale-bottom-btn").click(function(){
+    changeBlueRed("scale-bottom-btn");
+    changeBlueRed("scale-top-btn");
+});
+
+
+
+function changeBlueRed(btnid){
+   var property = document.getElementById(btnid);
+   var originalColor = property.style.backgroundColor;
+    if(originalColor == "rgb(255, 0, 0)"){
+        property.style.backgroundColor = "#007bff"; 
+        property.innerText = "B";
+    }
+    else{
+        property.style.backgroundColor = "#FF0000";   
+        property.innerText = "R";
+    }
+    if(document.getElementById("switch-top-btn").style.backgroundColor == "rgb(255, 0, 0)" && document.getElementById("scale-top-btn").style.backgroundColor == "rgb(255, 0, 0)"){
+    fieldConfig = 1;
+}
+
+
+if(document.getElementById("switch-top-btn").style.backgroundColor == "rgb(255, 0, 0)" && document.getElementById("scale-top-btn").style.backgroundColor == "rgb(0, 123, 255)"){
+    fieldConfig = 2;
+
+}
+
+if(document.getElementById("switch-top-btn").style.backgroundColor == "rgb(0, 123, 255)" && document.getElementById("scale-top-btn").style.backgroundColor == "rgb(255, 0, 0)"){
+    fieldConfig = 3;
+}
+
+if(document.getElementById("switch-top-btn").style.backgroundColor == "rgb(0, 123, 255)" && document.getElementById("scale-top-btn").style.backgroundColor == "rgb(0, 123, 255)"){
+    fieldConfig = 4;
+}
+   
+}
+
+
+
+
+   
+
+
+
 

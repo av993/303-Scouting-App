@@ -73,7 +73,7 @@ function expandGeneral(type) {
     var endgameStatus = document.getElementById('endgame-expand-status').innerHTML;
     
     var autoHeight = 220;
-    var teleopHeight = 350;
+    var teleopHeight = 290;
     var endgameHeight = 300;
     
     if (type == "auto") {

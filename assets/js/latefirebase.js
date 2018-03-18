@@ -78,35 +78,17 @@ function getMatchInfo() {
         "Portal Cubes" : $("#general-teleop-portal-cubes-input").val(),
         "Exchange Cubes" : $("#general-teleop-exchange-cubes-input").val(),
         "Ground Cubes" : $("#general-teleop-ground-cubes-input").val(),
-        "Cube Accuracy" : $("#general-teleop-accuracy-cubes-input").val(),            
-        "Intake Direction" : $("#teleop-intake-direction-dropdown").val(),
-        "Cube Manipulation" : $("#teleop-cube-manipulator-dropdown").val(),
-        "Strategy DO" : $("#teleop-strategy-dropdown").val(),
-        "Prioritize SS" : $("#teleop-priorities-dropdown").val(),
-        "DO Notes" : $("#general-teleop-defense-textarea").val(),
+        "Missed Cubes" : $("#general-teleop-missed-cubes-input").val(),
+        "Plays Defense" : $("#defense-chk").is(':checked'),
+        "Priority" : $("#teleop-priorities-dropdown").val(),
         "Climb" : $("#endgame-climb-dropdown").val(),
         "Burnout Or Died" :  $("#dropdown-burnout").is(':checked'),
         "Tipped Over" :  $("#dropdown-tipped-over").is(':checked'),
-        //"Connection Issues" :  $("#dropdown-connection-issues").is(':checked'),
-        "Cant Place Cubes" :  $("#dropdown-cant-place-cubes").is(':checked'),
+        "No Show" :  $("#dropdown-cant-place-cubes").is(':checked'),
         "Penalties" :  $("#dropdown-penalties").is(':checked'),
-        "Penalties Score" :  $("#general-teleop-penalty-points").val(),
         "Penalties Description" :  $("#general-endgame-penalties-input").val(),
-        "Switch Coordinates" : switchCoordinates,
-        "Exchange Coordinates" : exchangeCoordinates,
-        "Scale Coordinates" : scaleCoordinates,
-        "Pickup Coordinates" : pickupCoordinates,
-        "Problem Coordinates" : problemCoordinates,
-        "Penalty Coordinates" : penaltyCoordinates,
-        //"O/D Coordinates" : odCoordinates,
-        "Switch Time" : switchTime,
-        "Exchange Time" : exchangeTime,
-        "Scale Time" : scaleTime,
-        "Pickup Time" : pickupTime, 
-        "Problem Time" : problemTime,
-        "Penalty Time" : penaltyTime,
-        //"O/D Time" : odTime,
-        "Penalties" : penalties
+        "Events" : events,
+        "Events Str" : JSON.stringify(events)
     }
     return matchArr;
 }
@@ -117,31 +99,33 @@ function submitMatch() {
         if (matchInfo.hasOwnProperty(key)) {
             if ($.isArray(matchInfo[key])) {
                 if (matchInfo[key].length == 0) {
-                    matchInfo[key].push([-1,-1]);
+                    matchInfo[key].push([0,0]);
                 } 
             }
         }
     }
     var matchID = $("#match-event-dropdown").val() +  " Match";  
-    if ($("#match-event-dropdown").val() == "--Event--") {
-        alert("You need to enter the event");
+    if ($("#match-event-dropdown").val() == "--Event--" || $("#match-match-input").val() == "" || $("#match-position-dropdown").val() == "--Position--") {
+        alert("You need to enter the event, match, or position");
     }  else {
         
     graySubmit();
     var test =  localStorage.getItem(matchID);
     var testObj = JSON.parse(test);
-     
+
+        
     if (typeof testObj == 'undefined' || testObj == null){
          localStorage.setItem(matchID, JSON.stringify([]));
          localPush(matchID, matchInfo);
+        
     } else {  
          localPush(matchID, matchInfo);
      }
 
-    setMatchText("event-data", localStorage.getItem(matchID));
-    
+        
     if (navigator.onLine) {
         updateFirebase(matchID);
+
     } 
     else {
         alert("You are offline. Saving locally...\nWhen you are online, navigate to the Scouting Data tab and upload to the online database.");

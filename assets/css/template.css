@@ -37,7 +37,7 @@
 #event-submit {
   position:absolute;
   left:221px;
-  top:237px;
+  top:203px;
   background-image:none;
   width:116px;
   display:none;
@@ -48,9 +48,9 @@
 
 #event-cancel {
   position:absolute;
-  left:374px;
+  left:308px;
   display:none;
-  top:237px;
+  top:205px;
   background-image:none;
   width:127px;
   font-weight:800;

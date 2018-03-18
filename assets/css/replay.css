@@ -1,0 +1,57 @@
+#replay-field-img {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:600px;
+}
+
+#replay-field-div {
+  position:absolute;
+  top:147px;
+  width:1000px;
+  left:29px;
+}
+
+#replay-event-dropdown {
+  position:absolute;
+  top:83px;
+  width:187px;
+  left:57px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+
+#replay-team-dropdown {
+  position:absolute;
+  top:83px;
+  width:187px;
+  left:267px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+
+#replay-update-btn {
+  position:absolute;
+  border-color:white;
+  left:690px;
+  top:83px;
+  width:90px;
+  background-image:none;
+  background-color:rgb(14,181,179);
+}
+
+#replay-match-dropdown {
+  position:absolute;
+  top:83px;
+  width:187px;
+  left:478px;
+  background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+

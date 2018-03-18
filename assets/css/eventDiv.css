@@ -9,7 +9,7 @@
   display:none;
   left:78px;
   width:562px;
-  height:400px;
+  height:254px;
 }
 
 #event-data {
@@ -38,7 +38,7 @@
   left:373px;
 }
 
-#event-problem-btn {
+#event-portal-btn {
   top:82px;
   left:210px;
 }
@@ -48,12 +48,12 @@
   left:209px;
 }
 
-#event-pickup-btn {
+#event-ground-btn {
   top:82px;
   left:50px;
 }
 
-#event-penalty-btn {
+#event-missed-btn {
   top:83px;
   left:373px;
 }

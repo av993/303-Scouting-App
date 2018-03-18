@@ -37,7 +37,7 @@ th, td {
 
 #field-body {
   margin:0;
-  height:907px;
+  height:1150px;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size:1rem;
   font-weight:400;
@@ -255,9 +255,9 @@ th, td {
 
 #field-submit-btn {
   position:absolute;
-  top:624px;
+  top:1084px;
   background-color:rgb(46,187,195);
-  left:400px;
+  left:387px;
   font-size:30px;
   background-image:none;
 }
@@ -272,5 +272,95 @@ th, td {
 
 #field-nav {
   width:1025px;
+}
+
+#field-field-image {
+  position:absolute;
+  top:695px;
+  left:49px;
+  width:800px;
+}
+
+#field-config-title {
+  position:absolute;
+  top:641px;
+  left:50px;
+  font-size:36px;
+  color:white;
+}
+
+#switch-top-btn {
+  position:absolute;
+  background-image:none;
+  top:738px;
+  left:136px;
+  background-color:red;
+  font-size:39px;
+  width:93px;
+  height:70px;
+}
+
+#switch-bottom-btn {
+  position:absolute;
+  background-image:none;
+  top:920px;
+  left:136px;
+  background-color:red;
+  font-size:39px;
+  width:93px;
+  height:70px;
+}
+
+#scale-top-btn {
+  position:absolute;
+  background-image:none;
+  top:707px;
+  left:408px;
+  background-color:red;
+  font-size:39px;
+  width:75px;
+  height:67px;
+}
+
+#scale-bottom-btn {
+  position:absolute;
+  background-image:none;
+  top:948px;
+  left:408px;
+  background-color:red;
+  font-size:39px;
+  width:75px;
+  height:67px;
+}
+
+#switch-top-btn-2 {
+  position:absolute;
+  background-image:none;
+  top:738px;
+  left:662px;
+  background-color:red;
+  font-size:39px;
+  width:93px;
+  height:70px;
+}
+
+#switch-bottom-btn-2 {
+  position:absolute;
+  background-image:none;
+  top:919px;
+  left:662px;
+  background-color:red;
+  font-size:39px;
+  width:93px;
+  height:70px;
+}
+
+#position-label {
+  position:absolute;
+  top:1031px;
+  left:306px;
+  font-size:26px;
+  color:white;
+  font-weight:normal;
 }
 
