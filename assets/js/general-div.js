@@ -1,3 +1,5 @@
+
+
 if (navigator.onLine) {
     document.getElementById("field-status-label").innerHTML = "Online";
     document.getElementById('field-status-label').style.color = "#39ff41";
@@ -22,18 +24,15 @@ function uploadLocal() {
 }
 
 $('#data-type-dropdown').change(function() {
-    alert("TYPE");
     changeButton(); 
 });
 
 $('#data-event-dropdown').change(function() {
-    alert("EVENT");
     changeButton(); 
 });
 
 function changeButton() {
     var string = $('#data-event-dropdown').val() + " " + $('#data-type-dropdown').val();
-    alert(string);
     firebase.database().ref(string).once('value', function(snap){
      var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(toArray(snap)));
       var dlAnchorElem =  document.getElementById('data-json-btn');

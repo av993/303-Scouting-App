@@ -75,8 +75,8 @@ function getMatchInfo() {
         "Auto Cubes Picked Up" : $("#general-auto-cubes-picked-up-number-input").val(),
         "TeleOp Switch Cubes" : $("#general-teleop-switch-cubes-input").val(),
         "TeleOp Scale Cubes" : $("#general-teleop-scale-cubes-input").val(),
-        "Portal Cubes" : $("#general-teleop-portal-cubes-input").val(),
-        "Exchange Cubes" : $("#general-teleop-exchange-cubes-input").val(),
+        "Exchange Cubes" : $("#general-teleop-portal-cubes-input").val(),
+        "Portal Cubes" : $("#general-teleop-exchange-cubes-input").val(),
         "Ground Cubes" : $("#general-teleop-ground-cubes-input").val(),
         "Missed Cubes" : $("#general-teleop-missed-cubes-input").val(),
         "Plays Defense" : $("#defense-chk").is(':checked'),
@@ -153,6 +153,8 @@ function submitMatch() {
         localStorage.setItem("status", JSON.stringify(status)); 
     }
     }
+    
+
 
 }
 

@@ -1,3 +1,12 @@
+#field-flip-btn {
+  position:absolute;
+  top:643px;
+  left:403px;
+  background-image:none;
+  background-color:blue;
+  border-color:white;
+}
+
 #field-status-label {
   position:absolute;
   top:332px;

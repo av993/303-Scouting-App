@@ -307,7 +307,11 @@ function hello() {
         localStorage.setItem("status", JSON.stringify(status)); 
     }
     }
+    
 }
+
+
+
 document.getElementById("switch-bottom-btn-2").style.backgroundColor = "#007bff"; 
 document.getElementById("switch-top-btn").style.backgroundColor = "#FF0000"; 
 document.getElementById("switch-top-btn-2").style.backgroundColor = "#FF0000"; 
