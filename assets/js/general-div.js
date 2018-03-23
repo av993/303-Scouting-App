@@ -1,5 +1,3 @@
-
-
 if (navigator.onLine) {
     document.getElementById("field-status-label").innerHTML = "Online";
     document.getElementById('field-status-label').style.color = "#39ff41";
