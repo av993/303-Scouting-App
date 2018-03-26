@@ -25,6 +25,56 @@
   left:69px;
 }
 
+#profile-matches-label {
+  top:157px;
+  left:542px;
+}
+
+#profile-teleop-solo-climb {
+  top:341px;
+  left:343px;
+}
+
+#profile-teleop-buddy-climb-1 {
+  top:361px;
+  left:343px;
+}
+
+#profile-teleop-buddy-climb-2 {
+  top:382px;
+  left:343px;
+}
+
+#profile-teleop-climb-other-robot {
+  top:406px;
+  left:343px;
+}
+
+#profile-teleop-climb-other-robot-platform {
+  top:429px;
+  left:343px;
+}
+
+#profile-teleop-climb-label {
+  top:341px;
+  left:342px;
+}
+
+#profile-teleop-attempted-climb {
+  top:433px;
+  left:342px;
+}
+
+#profile-teleop-platform {
+  top:456px;
+  left:342px;
+}
+
+#profile-teleop-climb-none {
+  top:480px;
+  left:342px;
+}
+
 #profile-auto-detail {
   top:220px;
   left:69px;
@@ -67,6 +117,36 @@
 
 #profile-teleop-label {
   top:305px;
+  left:69px;
+}
+
+#profile-teleop-switch {
+  top:349px;
+  left:69px;
+}
+
+#profile-teleop-scale {
+  top:374px;
+  left:69px;
+}
+
+#profile-teleop-exchange {
+  top:398px;
+  left:69px;
+}
+
+#profile-teleop-ground {
+  top:422px;
+  left:69px;
+}
+
+#profile-teleop-portal {
+  top:447px;
+  left:69px;
+}
+
+#profile-teleop-missed {
+  top:472px;
   left:69px;
 }
 
