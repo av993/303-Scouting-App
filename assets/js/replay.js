@@ -18,6 +18,27 @@ function replayPoints(snapshot) {
         var item = childSnapshot.val();
         if (item["Team"] == $("#replay-team-dropdown").val() && item["Match"] == $("#replay-match-dropdown").val()) {
            
+          //  $('#replay-switch-cubes').val("Switch Cubes: " + item["TeleOp Switch Cubes"]);
+            
+             $('#replay-switch-cubes').innerHTML = "Switch Cubes: " + item["TeleOp Switch Cubes"];
+            
+            
+          /* $('#replay-scale-cubes').val("Switch Cubes: " + item["TeleOp Scale Cubes"]);
+            
+            $('#replay-exchange-cubes').val("Exchange Cubes: " + item["Exchange Cubes"]);
+            
+            $('#replay-portal-cubes').val("Portal Cubes: " + item["Portal Cubes"]);
+            
+            $('#replay-missed-cubes').val("Missed Cubes: " + item["Missed Cubes"]);
+            
+            $('#replay-auto-line').val("Auto Line: " + item["Auto Line"]);
+            
+            $('#replay-auto-scale').val("Auto Scale Cubes: " + item["Auto Scale Cubes"]);
+            
+            $('#replay-auto-switch').val("Auto Switch Cubes: " + item["Auto Switch Cubes"]);
+            
+            $('#replay-climb').val("Climb:  " + item["Climb"]);*/
+            
             var top = 150;
             var number = 1;
             item["Events"].forEach(function(event) {
