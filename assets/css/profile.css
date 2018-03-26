@@ -1,3 +1,9 @@
+#profile-matches-table {
+  position:absolute;
+  top:520px;
+  left:4px;
+}
+
 #profile-event-dropdown {
   position:absolute;
   top:83px;
@@ -35,18 +41,48 @@
   left:343px;
 }
 
+#profile-teleop-defense {
+  top:341px;
+  left:613px;
+}
+
+#profile-teleop-no-show {
+  top:475px;
+  left:613px;
+}
+
+#profile-teleop-prioritize {
+  top:367px;
+  left:613px;
+}
+
+#profile-teleop-died {
+  top:404px;
+  left:613px;
+}
+
+#profile-teleop-connection-lost {
+  top:427px;
+  left:613px;
+}
+
+#profile-teleop-tipped-over {
+  top:451px;
+  left:613px;
+}
+
 #profile-teleop-buddy-climb-1 {
   top:361px;
   left:343px;
 }
 
 #profile-teleop-buddy-climb-2 {
-  top:382px;
+  top:385px;
   left:343px;
 }
 
 #profile-teleop-climb-other-robot {
-  top:406px;
+  top:408px;
   left:343px;
 }
 
