@@ -45,26 +45,54 @@
                 </ul>
         </div>
         </div>
-    </nav><span class="label label-default">Label</span>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/addminus.js"></script>
-    <script src="assets/js/dropdown.js"></script>
-    <script src="assets/js/event.js"></script>
-    <script src="assets/js/field-scouting.js"></script>
-    <script src="assets/js/general-div.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-    <script src="assets/js/latefirebase.js"></script>
-    <script src="assets/js/latelocal.js"></script>
-    <script src="assets/js/matchEvents.js"></script>
-    <script src="assets/js/pit-scouting.js"></script>
-    <script src="assets/js/points.js"></script>
-    <script src="assets/js/replay.js"></script>
-    <script src="assets/js/scouting-data.js"></script>
-    <script src="assets/js/timer.js"></script>
-    <script src="assets/js/video.js"></script>
+    </nav><span class="label label-default">Label</span><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="profile-event-dropdown">
+      <option>--Event--</option>
+      <option>Mt Olive</option>
+      <option>Bridgewater</option>
+        <option>Pittsburgh</option>
+     <option>Detroit</option>
+
+    </select>
+  </div><div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="profile-team-dropdown">
+      <option>--Team--</option>
+      <option>56</option>
+      <option>75</option>
+        <option>303</option>
+     <option>747</option>
+
+    </select>
+  </div><span class="label label-default profile" id="profile-team-label" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:26px;"><span style="text-decoration: underline;">Team 48</span></span>
+    <span
+        class="label label-default profile" id="profile-auto-label" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:20px;"><span style="text-decoration: underline;">Autonomous</span></span><span class="label label-default profile" id="profile-teleop-label" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:20px;"><span style="text-decoration: underline;">TeleOp &amp; Endgame</span></span>
+        <span
+            class="label label-default profile" id="profile-auto-detail" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:17px;">The number of matches where this robot did a(n):</span><span class="label label-default profile" id="profile-auto-line" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:17px;">Auto Line: 5</span><span class="label label-default profile"
+                id="profile-auto-switch" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:17px;">Auto Switch: 1</span><span class="label label-default profile" id="profile-auto-three" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:17px;">Three Cube Auto: 1</span>
+            <span
+                class="label label-default profile" id="profile-auto-two" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:17px;">Two Cube Auto: 1</span><span class="label label-default profile" id="profile-auto-scale" style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:17px;">Auto Scale: 4</span><span class="label label-default profile" id="profile-no-auto-line"
+                    style="background-color:rgba(255,255,255,0);color:rgb(0,0,0);font-size:17px;">No Auto Line: 6</span><button class="btn btn-default" type="button" id="profile-update-btn" onclick = "updateReplay()">GET ROBOT PROFILE</button>
+                <script src="assets/js/jquery.min.js"></script>
+                <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+                <script src="assets/js/addminus.js"></script>
+                <script src="assets/js/dropdown.js"></script>
+                <script src="assets/js/event.js"></script>
+                <script src="assets/js/field-scouting.js"></script>
+                <script src="assets/js/general-div.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+                <script src="assets/js/latefirebase.js"></script>
+                <script src="assets/js/latelocal.js"></script>
+                <script src="assets/js/matchEvents.js"></script>
+                <script src="assets/js/pit-scouting.js"></script>
+                <script src="assets/js/points.js"></script>
+                <script src="assets/js/replay.js"></script>
+                <script src="assets/js/scouting-data.js"></script>
+                <script src="assets/js/timer.js"></script>
+                <script src="assets/js/video.js"></script>
 </body>
 
 </html>
