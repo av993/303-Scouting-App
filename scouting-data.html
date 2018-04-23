@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRC Scouting Team 303 Final With Lehigh</title>
+    <title>303-Scouting-App-masterNEW</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="assets/css/eventDiv.css">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/general-teleop-div.css">
     <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/inputDivs.css">
     <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/match-info.css">
+    <link rel="stylesheet" href="assets/css/Other/Added.css">
     <link rel="stylesheet" href="assets/css/Other/Button-Outlines---Pretty.css">
     <link rel="stylesheet" href="assets/css/Other/styles.css">
     <link rel="stylesheet" href="assets/css/pit-scouting.css">
@@ -66,10 +67,12 @@
       <option>--Event--</option>
       <option>Mt Olive</option>
       <option>Bridgewater</option>
-        <option>Lehigh</option>
+        <option>Pittsburgh</option>
         <option>Detroit</option>
     </select>
-  </div><div class="form-group">
+  </div>
+    <span
+        class="label label-default" id="to-label" style="background-color:rgba(58,63,68,0);font-size:15px;color:rgb(255,255,255);">to</span><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="data-event-points">
       <option>--Event--</option>
@@ -78,7 +81,7 @@
         <option>Pittsburgh</option>
         <option>Detroit</option>
     </select>
-  </div><div class="form-group">
+  </div><input type="number" id="first-range"><input type="number" id="last-range"><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="data-type-points">
       <option>--Type--</option>
@@ -91,27 +94,29 @@
         <option>Penalty</option>
 4
     </select>
-  </div><button class="btn btn-default" type="button" id="data-update-btn" onclick = "updatePoints()">UPDATE</button>
-    <script
-        src="assets/js/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/addminus.js"></script>
-        <script src="assets/js/dropdown.js"></script>
-        <script src="assets/js/event.js"></script>
-        <script src="assets/js/field-scouting.js"></script>
-        <script src="assets/js/general-div.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-        <script src="assets/js/latefirebase.js"></script>
-        <script src="assets/js/latelocal.js"></script>
-        <script src="assets/js/matchEvents.js"></script>
-        <script src="assets/js/pit-scouting.js"></script>
-        <script src="assets/js/points.js"></script>
-        <script src="assets/js/replay.js"></script>
-        <script src="assets/js/scouting-data.js"></script>
-        <script src="assets/js/timer.js"></script>
-        <script src="assets/js/video.js"></script>
+  </div><button class="btn btn-default" type="button" id="backup-btn" style="background-image:url(&quot;none&quot;);background-color:rgb(209,24,255);" onclick = "backupData()">BACKUP</button><button class="btn btn-default" type="button" id="show-backed-up" style="background-image:url(&quot;none&quot;);background-color:rgb(237,14,0);" onclick = "showBackup()">SHOW BACKED UP DATA</button>
+        <span
+            class="label label-default"></span><button class="btn btn-default" type="button" id="data-update-btn" onclick = "updatePoints()">UPDATE</button>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="assets/js/addminus.js"></script>
+            <script src="assets/js/backup.js"></script>
+            <script src="assets/js/dropdown.js"></script>
+            <script src="assets/js/event.js"></script>
+            <script src="assets/js/field-scouting.js"></script>
+            <script src="assets/js/general-div.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+            <script src="assets/js/latefirebase.js"></script>
+            <script src="assets/js/latelocal.js"></script>
+            <script src="assets/js/matchEvents.js"></script>
+            <script src="assets/js/pit-scouting.js"></script>
+            <script src="assets/js/points.js"></script>
+            <script src="assets/js/replay.js"></script>
+            <script src="assets/js/scouting-data.js"></script>
+            <script src="assets/js/timer.js"></script>
+            <script src="assets/js/video.js"></script>
 </body>
 
 </html>

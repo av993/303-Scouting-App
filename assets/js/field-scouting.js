@@ -1,5 +1,10 @@
 
-
+document.getElementById("switch-bottom-btn-2").style.backgroundColor = "#007bff"; 
+document.getElementById("switch-top-btn").style.backgroundColor = "#FF0000"; 
+document.getElementById("switch-top-btn-2").style.backgroundColor = "#FF0000"; 
+document.getElementById("switch-bottom-btn").style.backgroundColor = "#007bff";
+document.getElementById("scale-top-btn").style.backgroundColor = "#FF0000"; 
+document.getElementById("scale-bottom-btn").style.backgroundColor = "#007bff";
 var secondsOutside = 0;
 
 var bb1 = 0;
@@ -305,12 +310,7 @@ function hello() {
     }
     }
 }
-document.getElementById("switch-bottom-btn-2").style.backgroundColor = "#007bff"; 
-document.getElementById("switch-top-btn").style.backgroundColor = "#FF0000"; 
-document.getElementById("switch-top-btn-2").style.backgroundColor = "#FF0000"; 
-document.getElementById("switch-bottom-btn").style.backgroundColor = "#007bff";
-document.getElementById("scale-top-btn").style.backgroundColor = "#FF0000"; 
-document.getElementById("scale-bottom-btn").style.backgroundColor = "#007bff";
+
 
 $("#switch-top-btn").click(function(){
     changeBlueRed("switch-top-btn");
@@ -356,21 +356,31 @@ $("#scale-bottom-btn").click(function(){
 
 
 function changeBlueRed(btnid){
-   var property = document.getElementById(btnid);
+ /*  var property = document.getElementById(btnid);
    var originalColor = property.style.backgroundColor;
     if(originalColor == "rgb(255, 0, 0)"){
-        property.style.backgroundColor = "#007bff"; 
-        property.innerText = "B";
+        property.style.backgroundColor = "#007bff";
+        //property.innerText = "B";
     }
     else{
-        property.style.backgroundColor = "#FF0000";   
-        property.innerText = "R";
+        property.style.backgroundColor = "#FF0000";  
+       // property.innerText = "R";
     }
-    if(document.getElementById("switch-top-btn").style.backgroundColor == "rgb(255, 0, 0)" && document.getElementById("scale-top-btn").style.backgroundColor == "rgb(255, 0, 0)"){
-    fieldConfig = 1;
+    */
+    var property = document.getElementById(btnid);
+   var originalColor = property.style.backgroundColor;
+    
+    if(originalColor == "rgb(255, 0, 0)"){
+        //property.style.backgroundColor = "#005eff";  
+    }else{
+        property.style.backgroundColor = "#ff004d";   
+    }
+    
 }
 
-
+if(document.getElementById("switch-top-btn").style.backgroundColor == "rgb(255, 0, 0)" && document.getElementById("scale-top-btn").style.backgroundColor == "rgb(255, 0, 0)"){
+    fieldConfig = 1;
+    
 if(document.getElementById("switch-top-btn").style.backgroundColor == "rgb(255, 0, 0)" && document.getElementById("scale-top-btn").style.backgroundColor == "rgb(0, 123, 255)"){
     fieldConfig = 2;
 

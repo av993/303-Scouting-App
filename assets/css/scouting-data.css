@@ -1,3 +1,47 @@
+#show-backed-up {
+  position:absolute;
+  left:395px;
+  background-image:none;
+  top:243px;
+  background-color:rgb(237,14,0);
+}
+
+#to-label {
+  position:absolute;
+  top:156px;
+  left:470px;
+}
+
+#first-range {
+  position:absolute;
+  top:155px;
+  left:425px;
+  width:40px;
+}
+
+#status-type {
+  position:absolute;
+  left:342px;
+  top:236px;
+  width:300px;
+  height:100px;
+}
+
+#last-range {
+  position:absolute;
+  top:155px;
+  left:503px;
+  width:40px;
+}
+
+#backup-btn {
+  position:absolute;
+  top:192px;
+  background-image:none;
+  left:446px;
+  background-color:rgb(209,24,255);
+}
+
 #data-update-btn {
   position:absolute;
   top:501px;
@@ -85,6 +129,17 @@
   width:264px;
   left:357px;
   background-color:#04a3a3;
+  color:white;
+  border-width:1px;
+  border-color:white;
+}
+
+#data-backup-dropdown {
+  position:absolute;
+  top:142px;
+  width:264px;
+  left:357px;
+  background-color:#e55ce8;
   color:white;
   border-width:1px;
   border-color:white;

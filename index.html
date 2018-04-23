@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRC Scouting Team 303 Final With Lehigh</title>
+    <title>303-Scouting-App-masterNEW</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="assets/css/eventDiv.css">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/general-teleop-div.css">
     <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/inputDivs.css">
     <link rel="stylesheet" href="assets/css/Match Scouting/Match Inputs/match-info.css">
+    <link rel="stylesheet" href="assets/css/Other/Added.css">
     <link rel="stylesheet" href="assets/css/Other/Button-Outlines---Pretty.css">
     <link rel="stylesheet" href="assets/css/Other/styles.css">
     <link rel="stylesheet" href="assets/css/pit-scouting.css">
@@ -56,7 +57,7 @@
           <option>Red 3</option>
     
     </select>
-  </div><button class="btn btn-default" type="button" id="flip-btn" style="background-image:url(&quot;none&quot;);background-color:rgb(105,180,255);" onclick = "flip()">FLIP</button><div class="form-group">
+  </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="match-team-dropdown">
       <option>--Team--</option>
@@ -65,30 +66,27 @@
   </div><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="match-event-dropdown">
-      <option>--Event--</option>
-        <option>Mt Olive</option>
-          <option>Lehigh</option>
-        <option>Pittsburgh</option>
           <option>Detroit</option>
 
     </select>
-  </div><input type="number" id="match-match-input"><span class="label label-default" id="match-match-label"
-            style="font-size:20px;background-color:rgba(58,63,68,0);">Match:</span><span class="label label-default"></span><button class="btn btn-default match" type="button" id="start-match-btn" onclick = "startTimer(150)">START MATCH</button><strong id="timer" class="bold-white match">02:30 </strong><span class="label label-default" id="endgame-expand-status">Hidden</span><span class="label label-default" id="auto-expand-status">Hidden</span><span class="label label-default" id="teleop-expand-status">Hidden</span>
+  </div><input type="number" id="match-match-input"><span class="label label-default" id="match-match-label" style="font-size:20px;background-color:rgba(58,63,68,0);">Match:</span>
         <span
-            class="label label-default" id="match-name-label" style="background-color:rgba(58,63,68,0);font-size:18px;">Name:</span><input type="text" id="match-name-input">
-            <div class="show match" id="image-div"><img src="assets/img/RoboticsField.png" id="playingField" class="match"></div>
-            <div id="input-div" class="match" style="width:310px;">
-                <div id="event-div"><button class="btn btn-default event-btn" type="button" id="event-switch-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">SWITCH</button><button class="btn btn-default event-btn" type="button"
-                        id="event-scale-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">SCALE</button><button class="btn btn-default event-btn" type="button" id="event-missed-btn" style="background-image:url(&quot;none&quot;);font-size:21px;background-color:#0fbab7;">MISSED</button>
-                    <button
-                        class="btn btn-default event-btn" type="button" id="event-portal-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">PORTAL</button><button class="btn btn-default event-btn" type="button" id="event-ground-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">GROUND</button><button class="btn btn-default event-btn"
-                            type="button" id="event-exchange-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">EXCHANGE</button></div><button class="btn btn-default" type="button" id="event-cancel" style="font-size:21px;">CANCEL</button>
-                <div
-                    id="general-div" style="background-color:rgba(215,8,8,0);"><button class="btn btn-default" type="button" id="auto-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('auto')"><strong>Autonomous</strong> </button><button class="btn btn-default" type="button" id="teleop-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('teleop')"><strong>TeleOp</strong> </button>
-                    <p id="general-auto-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p><button class="btn btn-default" type="button" id="endgame-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('endgame')"><strong>Endgame &amp; Feedback</strong> </button>
-                    <p id="general-teleop-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p>
-                    <p id="general-endgame-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p>
-                    <div id="general-endgame-div" style="background-color:rgba(66,222,82,0.22);"><div class="control-group">
+            class="label label-default"></span><span class="label label-default" id="endgame-expand-status">Hidden</span><span class="label label-default" id="auto-expand-status">Hidden</span><span class="label label-default" id="teleop-expand-status">Hidden</span><span class="label label-default" id="match-name-label" style="background-color:rgba(58,63,68,0);font-size:18px;">Name:</span>
+            <input
+                type="text" id="match-name-input">
+                <div class="show match" id="image-div"></div>
+                <div id="input-div" class="match" style="width:310px;">
+                    <div id="event-div"><button class="btn btn-default event-btn" type="button" id="event-switch-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">SWITCH</button><button class="btn btn-default event-btn" type="button"
+                            id="event-scale-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">SCALE</button><button class="btn btn-default event-btn" type="button" id="event-missed-btn" style="background-image:url(&quot;none&quot;);font-size:21px;background-color:#0fbab7;">MISSED</button>
+                        <button
+                            class="btn btn-default event-btn" type="button" id="event-portal-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">PORTAL</button><button class="btn btn-default event-btn" type="button" id="event-ground-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">GROUND</button><button class="btn btn-default event-btn"
+                                type="button" id="event-exchange-btn" style="background-image:url(&quot;none&quot;);background-color:#0fbab7;font-size:21px;">EXCHANGE</button></div><button class="btn btn-default" type="button" id="event-cancel" style="font-size:21px;">CANCEL</button>
+                    <div
+                        id="general-div" style="background-color:rgba(215,8,8,0);"><button class="btn btn-default" type="button" id="auto-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('auto')"><strong>Autonomous</strong> </button><button class="btn btn-default" type="button" id="teleop-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('teleop')"><strong>TeleOp</strong> </button>
+                        <p id="general-auto-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p><button class="btn btn-default" type="button" id="endgame-expand" style="font-size:17px;background-image:url(&quot;none&quot;);background-color:rgb(15,186,183);" onclick = "expandGeneral('endgame')"><strong>Endgame &amp; Feedback</strong> </button>
+                        <p id="general-teleop-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p>
+                        <p id="general-endgame-expand-sign" style="font-size:20px;color:rgb(255,255,255);"><strong>+</strong> </p>
+                        <div id="general-endgame-div" style="background-color:rgba(66,222,82,0.22);"><div class="control-group">
     <label class="control control-checkbox penalty" id ="general-endgame-burnout">
         Burnout/Died
             <input type="checkbox" id = "dropdown-burnout"/>
@@ -97,19 +95,20 @@
 </div><span class="label label-default" id="general-endgame-penalties-label" style="background-color:rgba(255,255,255,0);font-size:17px;">Penalities/Problems: </span><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="endgame-climb-dropdown">
-      <option>--Platform/Climb--</option>
+      <option>--Select Endgame: Climb/Platform--</option>
       <option>Solo climb</option>
       <option>Climbed with a buddy </option>
+      <option>Lifted other robots</option>
       <option>Climbed with two buddies</option>
-       <option>Climbed on another robot</option>
+      <option>Climbed on another robot</option>
       <option>Climbed on other robot's platform</option>
       <option>Attempted climb </option>
       <option>Platform</option>
       <option>No platform/climb</option>
     </select>
   </div>
-                        <span
-                            class="label label-default" id="general-endgame-penalties-label" style="background-color:rgba(255,255,255,0);font-size:17px;">Penalities/Problems: </span><div class="control-group">
+                            <span
+                                class="label label-default" id="general-endgame-penalties-label" style="background-color:rgba(255,255,255,0);font-size:17px;">Penalities/Problems: </span><div class="control-group">
     <label class="control control-checkbox penalty" id ="general-endgame-tipped-over">
         Tipped Over
             <input type="checkbox" id = "dropdown-tipped-over"/>
@@ -133,23 +132,23 @@
             <input type="checkbox" id = "dropdown-cant-place-cubes"/>
         <div class="control_indicator"></div>
     </label>
-</div><textarea placeholder=" Notes..." id="general-endgame-penalties-input"></textarea></div>
-                    <div
-                        id="general-auto-div"><div class="control-group">
+</div><textarea placeholder=" Notes..."
+                                    id="general-endgame-penalties-input"></textarea></div>
+                        <div id="general-auto-div"><div class="control-group">
     <label class="control control-checkbox" id ="first-chk">
         Auto Line
             <input type="checkbox" id = "auto-line-chk"/>
         <div class="control_indicator"></div>
     </label>
 </div><span class="label label-default scale-cubes-auto-general" id="general-auto-div-switch-cubes" style="background-color:rgba(58,63,68,0);font-size:16px;">Scale Cubes:</span><span class="label label-default"
-                            id="general-auto-div-cubes-picked-up" style="background-color:rgba(58,63,68,0);font-size:16px;">Cubes Picked Up:</span><span class="label label-default" id="general-auto-div-switch-cubes" style="background-color:rgba(58,63,68,0);font-size:16px;">Switch Cubes:</span>
-                        <span
-                            class="label label-default" id="general-auto-div-exchange-cubes" style="background-color:rgba(58,63,68,0);font-size:16px;">Exchange Cubes:</span><button class="btn btn-default" type="button" id="general-auto-div-switch-minus"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-scale-minus"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-exchange-minus"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-cubes-picked-up-minus"><strong>-</strong> </button><input type="number" id="general-auto-cubes-picked-up-number-input"
-                                style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><input type="number" id="general-auto-switch-number-input" style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><input type="number" id="general-auto-exchange-number-input"
-                                style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><input type="number" id="general-auto-scale-number-input" style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><button class="btn btn-default" type="button" id="general-auto-div-switch-plus"><strong>+</strong> </button>
-                            <button
-                                class="btn btn-default" type="button" id="general-auto-div-cubes-picked-up-plus">+</button><button class="btn btn-default" type="button" id="general-auto-div-scale-plus"><strong>+</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-exchange-plus"><strong>+</strong> </button></div>
-            <div id="general-teleop-div" style="color:rgb(255,255,255);background-color:rgba(49,211,201,0.22);background-image:url(&quot;none&quot;);"><div class="form-group">
+                                id="general-auto-div-cubes-picked-up" style="background-color:rgba(58,63,68,0);font-size:16px;">Cubes Picked Up:</span><span class="label label-default" id="general-auto-div-switch-cubes" style="background-color:rgba(58,63,68,0);font-size:16px;">Switch Cubes:</span>
+                            <span
+                                class="label label-default" id="general-auto-div-exchange-cubes" style="background-color:rgba(58,63,68,0);font-size:16px;">Exchange Cubes:</span><button class="btn btn-default" type="button" id="general-auto-div-switch-minus"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-scale-minus"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-exchange-minus"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-cubes-picked-up-minus"><strong>-</strong> </button><input type="number" id="general-auto-cubes-picked-up-number-input"
+                                    style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><input type="number" id="general-auto-switch-number-input" style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><input type="number" id="general-auto-exchange-number-input"
+                                    style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><input type="number" id="general-auto-scale-number-input" style="background-color:rgb(255,255,255);color:rgb(0,0,0);"><button class="btn btn-default" type="button" id="general-auto-div-switch-plus"><strong>+</strong> </button>
+                                <button
+                                    class="btn btn-default" type="button" id="general-auto-div-cubes-picked-up-plus">+</button><button class="btn btn-default" type="button" id="general-auto-div-scale-plus"><strong>+</strong> </button><button class="btn btn-default" type="button" id="general-auto-div-exchange-plus"><strong>+</strong> </button></div>
+                        <div id="general-teleop-div" style="color:rgb(255,255,255);background-color:rgba(49,211,201,0.22);background-image:url(&quot;none&quot;);"><div class="form-group">
     <label for="exampleFormControlSelect1"></label>
     <select class="form-control" id="teleop-priorities-dropdown">
         <option>--Scoring priorities--</option>
@@ -161,38 +160,39 @@
     </select>
   </div>
 <span class="label label-default" id="general-teleop-switch-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Switch Cubes:</span><span class="label label-default" id="general-teleop-missed-cubes-label"
-                    style="background-color:rgba(58,63,68,0);font-size:17px;">Missed Cubes:</span><span class="label label-default" id="general-teleop-scale-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Scale Cubes:</span><span class="label label-default"
-                    id="general-teleop-portal-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Exchange Cubes:</span><span class="label label-default" id="general-teleop-exchange-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Portal Cubes:</span>
-                <span
-                    class="label label-default" id="general-teleop-ground-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Ground Cubes:</span><span class="label label-default hidden" id="general-teleop-ground-accuracy-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Cube Accuracy (0-10):</span><span class="label label-default" id="general-teleop-cube-manipulatiton-label"
-                        style="background-color:rgba(58,63,68,0);font-size:17px;"> </span><button class="btn btn-default" type="button" id="general-teleop-switch-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button>
-                    <button
-                        class="btn btn-default" type="button" id="general-teleop-missed-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default hidden" type="button" id="general-teleop-accuracy-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default"
-                            type="button" id="general-teleop-scale-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default" type="button" id="general-teleop-portal-cubes-plus"
-                            style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default" type="button" id="general-teleop-exchange-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button>
-                        <button
-                            class="btn btn-default" type="button" id="general-teleop-ground-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default" type="button" id="general-teleop-switch-cubes-minus" style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button>
-                            <button
-                                class="btn btn-default" type="button" id="general-teleop-missed-cubes-minus" style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default hidden" type="button" id="general-teleop-accuracy-cubes-minus" style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button>
-                                <button
-                                    class="btn btn-default" type="button" id="general-teleop-portal-cubes-minus" style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-teleop-exchange-cubes-minus" style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button>
+                                style="background-color:rgba(58,63,68,0);font-size:17px;">Missed Cubes:</span><span class="label label-default" id="general-teleop-scale-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Scale Cubes:</span>
+                            <span
+                                class="label label-default" id="general-teleop-portal-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Exchange Cubes:</span><span class="label label-default" id="general-teleop-exchange-cubes-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Portal Cubes:</span><span class="label label-default" id="general-teleop-ground-cubes-label"
+                                    style="background-color:rgba(58,63,68,0);font-size:17px;">Ground Cubes:</span><span class="label label-default hidden" id="general-teleop-ground-accuracy-label" style="background-color:rgba(58,63,68,0);font-size:17px;">Cube Accuracy (0-10):</span>
+                                <span
+                                    class="label label-default" id="general-teleop-cube-manipulatiton-label" style="background-color:rgba(58,63,68,0);font-size:17px;"> </span><button class="btn btn-default" type="button" id="general-teleop-switch-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default"
+                                        type="button" id="general-teleop-missed-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default hidden" type="button" id="general-teleop-accuracy-cubes-plus"
+                                        style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default" type="button" id="general-teleop-scale-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button>
                                     <button
-                                        class="btn btn-default" type="button" id="general-teleop-ground-cubes-minus" style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-teleop-scale-cubes-minus" style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button>
+                                        class="btn btn-default" type="button" id="general-teleop-portal-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default" type="button" id="general-teleop-exchange-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default"
+                                            type="button" id="general-teleop-ground-cubes-plus" style="background-color:rgb(255,255,255);background-image:url(&quot;none&quot;);color:#008080;">+ </button><button class="btn btn-default" type="button" id="general-teleop-switch-cubes-minus"
+                                            style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-teleop-missed-cubes-minus"
+                                            style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default hidden" type="button" id="general-teleop-accuracy-cubes-minus"
+                                            style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-teleop-portal-cubes-minus"
+                                            style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-teleop-exchange-cubes-minus"
+                                            style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-teleop-ground-cubes-minus"
+                                            style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><button class="btn btn-default" type="button" id="general-teleop-scale-cubes-minus"
+                                            style="background-image:url(&quot;none&quot;);background-color:rgb(255,255,255);color:#008080;font-size:13px;"><strong>-</strong> </button><input type="number" id="general-teleop-switch-cubes-input" class="center">
                                         <input
-                                            type="number" id="general-teleop-switch-cubes-input" class="center"><input type="number" id="general-teleop-scale-cubes-input" class="center"><input type="number" id="general-teleop-missed-cubes-input" class="center"><input class="hidden center" type="number" id="general-teleop-accuracy-cubes-input">
-                                            <input
-                                                type="number" id="general-teleop-portal-cubes-input" class="center"><input type="number" id="general-teleop-exchange-cubes-input" class="center"><input type="number" id="general-teleop-ground-cubes-input" class="center"><div class="control-group" id = "plays-defense">
+                                            type="number" id="general-teleop-scale-cubes-input" class="center"><input type="number" id="general-teleop-missed-cubes-input" class="center"><input class="hidden center" type="number" id="general-teleop-accuracy-cubes-input"><input type="number" id="general-teleop-portal-cubes-input"
+                                                class="center"><input type="number" id="general-teleop-exchange-cubes-input" class="center"><input type="number" id="general-teleop-ground-cubes-input" class="center"><div class="control-group" id = "plays-defense">
     <label class="control control-checkbox" id ="first-chk">
         Plays Defense
             <input type="checkbox" id = "defense-chk"/>
         <div class="control_indicator"></div>
     </label>
 </div></div>
-    </div>
+                </div>
     </div><span class="label label-default hidden" id="event-status-label">Label</span><button class="btn btn-default" type="button" id="general-submit" onclick = "submitMatch()">SUBMIT</button></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/addminus.js"></script>
+    <script src="assets/js/backup.js"></script>
     <script src="assets/js/dropdown.js"></script>
     <script src="assets/js/event.js"></script>
     <script src="assets/js/field-scouting.js"></script>

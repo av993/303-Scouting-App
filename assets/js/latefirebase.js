@@ -9,34 +9,73 @@ var config = {
     messagingSenderId: "481056362945"
   };
 
+function showBackup() {
+    var retrieved = localStorage.getItem("Backup Detroit Match");
+    var retrievedObj = JSON.parse(retrieved);
+    var dataStr = "";
+    for (var i = 0; i < retrievedObj.length; i++) {
+       var pushObj = retrievedObj[i];
+        dataStr = dataStr + pushObj["Name"] + " " + pushObj["Match"] + ", ";
+    }    
+    alert(dataStr);
+}
+
 firebase.initializeApp(config);
 database = firebase.database();    
 var storage = firebase.storage();
 var storageRef = storage.ref();
 
+var backup = false;
+var first = 0;
+var last = 0;
+
+function backupData() {
+    backup = true;
+    first = parseInt($('#first-range').val());
+    last = parseInt($('#last-range').val());
+    updateFirebase("Backup Detroit Match");
+}
 
 function push() {
     submitMatch();
 }
 
 function updateFirebase(localID) {
+    
+    
     var retrievedObj = localStorage.getItem(localID); 
     var objArr = JSON.parse(retrievedObj);
+    
     var count = 0;
 
     for (var i = 0; i < objArr.length; i++) {
         var pushObj = objArr[i];    
         //alert(JSON.stringify(pushObj));
-        pushToList(localID, pushObj);
+
+        if (backup == true) {
+            localID = "Detroit Match";
+            //alert(pushObj["Match"]);
+            if (parseInt(pushObj["Match"]) >= first && parseInt(pushObj["Match"]) <= last) {
+               // alert(JSON.stringify(pushObj));
+                pushToList(localID, pushObj);
+                pushToList("BACKUP DETROIT MATCH", pushObj);
+
+            }
+        } else {
+            pushToList(localID, pushObj);
+        }
+       
      }
 
-    localStorage.setItem(localID, JSON.stringify([]));
+    if (backup == false) {
+        localStorage.setItem(localID, JSON.stringify([]));    
+    }
+    
     alert("You have successfully uploaded the data for " + localID);
     
 }
 
 function pushToList(reference, item) {
-
     var firebaseRef = firebase.database().ref(reference);
     var newPostRef = firebaseRef.push();
     newPostRef.set(item);
@@ -75,8 +114,8 @@ function getMatchInfo() {
         "Auto Cubes Picked Up" : $("#general-auto-cubes-picked-up-number-input").val(),
         "TeleOp Switch Cubes" : $("#general-teleop-switch-cubes-input").val(),
         "TeleOp Scale Cubes" : $("#general-teleop-scale-cubes-input").val(),
-        "Portal Cubes" : $("#general-teleop-portal-cubes-input").val(),
-        "Exchange Cubes" : $("#general-teleop-exchange-cubes-input").val(),
+        "Exchange Cubes" : $("#general-teleop-portal-cubes-input").val(),
+        "Portal Cubes" : $("#general-teleop-exchange-cubes-input").val(),
         "Ground Cubes" : $("#general-teleop-ground-cubes-input").val(),
         "Missed Cubes" : $("#general-teleop-missed-cubes-input").val(),
         "Plays Defense" : $("#defense-chk").is(':checked'),
@@ -86,14 +125,15 @@ function getMatchInfo() {
         "Tipped Over" :  $("#dropdown-tipped-over").is(':checked'),
         "No Show" :  $("#dropdown-cant-place-cubes").is(':checked'),
         "Penalties" :  $("#dropdown-penalties").is(':checked'),
-        "Penalties Description" :  $("#general-endgame-penalties-input").val(),
+        "Notes" :  $("#general-endgame-penalties-input").val(),
         "Events" : events,
         "Events Str" : JSON.stringify(events)
     }
     return matchArr;
 }
 
-function submitMatch() {
+function submitMatch() {  
+    backup = false;
     var matchInfo = getMatchInfo();
     for (var key in matchInfo) {
         if (matchInfo.hasOwnProperty(key)) {
@@ -112,7 +152,6 @@ function submitMatch() {
     graySubmit();
     var test =  localStorage.getItem(matchID);
     var testObj = JSON.parse(test);
-
         
     if (typeof testObj == 'undefined' || testObj == null){
          localStorage.setItem(matchID, JSON.stringify([]));
@@ -120,13 +159,24 @@ function submitMatch() {
         
     } else {  
          localPush(matchID, matchInfo);
+    }
+            
+    var backupID = "Backup " + matchID;        
+    var backupTest =  localStorage.getItem(backupID);
+    var backupObj = JSON.parse(test);
+    
+    if (typeof backupObj == 'undefined' || backupObj == null){
+         localStorage.setItem(backupID, JSON.stringify([]));
+         localPush(backupID, matchInfo);
+        
+    } else {  
+         localPush(backupID, matchInfo);
      }
-
         
     if (navigator.onLine) {
         updateFirebase(matchID);
-
     } 
+        
     else {
         alert("You are offline. Saving locally...\nWhen you are online, navigate to the Scouting Data tab and upload to the online database.");
         

@@ -1,0 +1,19 @@
+#match-event-dropdown {
+  left:41px;
+  width:184px;
+  top:65px;
+}
+
+#match-team-dropdown {
+  left:290px;
+  height:39px;
+  top:65px;
+  width:184px;
+}
+
+#match-position-dropdown {
+  top:65px;
+  left:538px;
+  width:184px;
+}
+
